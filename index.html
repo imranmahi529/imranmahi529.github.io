@@ -4,93 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Imran Hussain Mahi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
       scroll-behavior: smooth;
     }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe6e6, #e6f7ff);
+      color: #333;
+    }
     header {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white;
+      background: #ff6600;
+      padding: 40px 10px;
       text-align: center;
-      padding: 100px 20px;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2em;
+      color: white;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     }
     nav {
+      background: #333;
       display: flex;
       justify-content: center;
-      background: #ff6b6b;
-      padding: 10px 0;
-      gap: 20px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
     }
     nav a {
+      padding: 15px 20px;
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #ff6600;
     }
     section {
-      padding: 60px 20px;
-      max-width: 1200px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
+      background: #ffffffcc;
+      margin-bottom: 30px;
+      border-radius: 14px;
+      box-shadow: 3px 3px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-    section:nth-child(even) {
-      background: #f1f1f1;
+    section:hover {
+      transform: scale(1.02);
     }
     h2 {
-      color: #ff6b6b;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      color: #0099cc;
     }
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      flex: 1 1 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
+    ul {
+      padding-left: 20px;
     }
     .btn {
       display: inline-block;
-      background: #ff6b6b;
-      color: white;
       padding: 10px 20px;
-      border-radius: 5px;
+      background: #0099cc;
+      color: white;
       text-decoration: none;
-      margin-top: 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #006699;
     }
     footer {
-      background: #222;
+      background: #333;
       color: white;
       text-align: center;
-      padding: 30px 10px;
+      padding: 20px;
     }
   </style>
 </head>
@@ -102,68 +87,73 @@
 </header>
 
 <nav>
+  <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#sponsorship">Sponsorship</a>
-  <a href="#fan">Fan Zone</a>
+  <a href="#fanzone">Fan Zone</a>
   <a href="#gallery">Gallery</a>
   <a href="#shop">Shop</a>
   <a href="#contact">Contact</a>
 </nav>
 
+<section id="home">
+  <h2>Home</h2>
+  <p>Stay connected with Mahi’s creative world of videos, football, and content!</p>
+</section>
+
 <section id="about">
   <h2>About Me</h2>
-  <p>Hi, I'm Imran Hussain Mahi from Sylhet, Bangladesh. I’m a passionate director, content creator, and online entrepreneur. I run a team called "Chacha Bhatiya Team" and manage football clubs too!</p>
+  <p>I'm Imran Hussain Mahi from Sylhet, Bangladesh. Director of Chacha Bhatiya Team, footballer, and passionate content creator.</p>
 </section>
 
 <section id="services">
   <h2>Services</h2>
-  <div class="card-container">
-    <div class="card">Drama/Video Direction & Editing</div>
-    <div class="card">Promotional Video Creation</div>
-    <div class="card">Football Event Management</div>
-    <div class="card">Social Media Content Strategy</div>
-  </div>
+  <ul>
+    <li>Video Direction & Editing</li>
+    <li>Football Event Management</li>
+    <li>Promotional Video Creation</li>
+    <li>Social Media Content Strategy</li>
+  </ul>
 </section>
 
 <section id="sponsorship">
   <h2>Sponsorship Info</h2>
-  <p>Want to sponsor one of our videos or events? Available Packages:</p>
+  <p>Want to sponsor a video/event?</p>
   <ul>
-    <li>Basic: 500 BDT</li>
-    <li>Standard: 2,000 BDT</li>
-    <li>Premium: 5,000+ BDT</li>
+    <li>500 BDT – Logo Placement</li>
+    <li>2000 BDT – Mid-roll Ad</li>
+    <li>5000 BDT – Full Sponsored Video</li>
+    <li>10,000 BDT – VIP Branding</li>
   </ul>
 </section>
 
-<section id="fan">
+<section id="fanzone">
   <h2>Fan Zone</h2>
-  <p>We love hearing from our fans! Follow me on:</p>
-  <a class="btn" href="https://www.facebook.com/share/1EkoN2AS5s/?mibextid=wwXIfr">Facebook</a>
-  <a class="btn" href="https://youtube.com/@imranhussainmahi177?si=7RVs2BHKo1w5SuC0">YouTube</a>
-  <a class="btn" href="https://www.tiktok.com/@imranmahi519?_t=ZS-8vc6KVT5v5c&_r=1">TikTok</a>
+  <p>Drop a message or follow me:</p>
+  <ul>
+    <li><a class="btn" href="https://facebook.com" target="_blank">Facebook</a></li>
+    <li><a class="btn" href="https://youtube.com" target="_blank">YouTube</a></li>
+    <li><a class="btn" href="https://tiktok.com" target="_blank">TikTok</a></li>
+  </ul>
 </section>
 
 <section id="gallery">
-  <h2>Photo & Video Gallery</h2>
-  <div class="gallery card-container">
-    <img src="https://via.placeholder.com/300x200?text=Photo+1" alt="Gallery 1">
-    <img src="https://via.placeholder.com/300x200?text=Photo+2" alt="Gallery 2">
-    <img src="https://via.placeholder.com/300x200?text=Photo+3" alt="Gallery 3">
-  </div>
+  <h2>Gallery</h2>
+  <p>[Add your photo or video previews here]</p>
 </section>
 
 <section id="shop">
   <h2>Our Products</h2>
-  <div class="card-container">
-    <div class="card">Men's T-Shirt<br><strong>450 BDT</strong></div>
-    <div class="card">Team Jersey<br><strong>800 BDT</strong></div>
-  </div>
+  <ul>
+    <li>Men’s T-Shirt – 450 BDT</li>
+    <li>Team Jersey – 800 BDT</li>
+  </ul>
 </section>
 
 <section id="contact">
   <h2>Contact Me</h2>
-  <a class="btn" href="mailto:mahi@example.com">Send Email</a>
+  <p>Send a message anytime! [You can add a form later]</p>
 </section>
 
 <footer>
