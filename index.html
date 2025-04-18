@@ -3,162 +3,349 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Imran Hussain Mahi - Director, Entrepreneur, Content Creator">
   <title>Imran Hussain Mahi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #ffe6e6, #e6f7ff);
-      color: #333;
-    }
-    header {
-      background: #ff6600;
-      padding: 40px 10px;
-      text-align: center;
-      color: white;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    }
-    nav {
-      background: #333;
-      display: flex;
-      justify-content: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background: #ff6600;
-    }
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-      background: #ffffffcc;
-      margin-bottom: 30px;
-      border-radius: 14px;
-      box-shadow: 3px 3px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    section:hover {
-      transform: scale(1.02);
-    }
-    h2 {
-      margin-bottom: 15px;
-      color: #0099cc;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #0099cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #006699;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#fan">Fan Zone</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero" id="home">
+      <h1>Welcome to Imran Hussain Mahi's World</h1>
+      <p>Director | Entrepreneur | Content Creator</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Imran Hussain Mahi from Sylhet. I run Chacha Bhatiya Team and manage football clubs too!</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Drama/Video Direction & Editing</li>
+      <li>Promotional Video Creation</li>
+      <li>Football Event Management</li>
+      <li>Social Media Content Strategy</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Photo & Video Gallery</h2>
+    <p>Coming soon with interactive lightbox!</p>
+  </section>
+
+  <section id="shop">
+    <h2>Our Products</h2>
+    <p>Men's T-Shirt - 450 BDT</p>
+    <p>Team Jersey - 800 BDT</p>
+  </section>
+
+  <section id="fan">
+    <h2>Fan Zone</h2>
+    <p>We love hearing from our fans! Follow us on social media.</p>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">TikTok</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Imran Hussain Mahi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Imran Hussain Mahi - Feature Set 2</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header>
-  <h1>Welcome to Imran Hussain Mahi's World</h1>
-  <p>Content Creator | Director | Entrepreneur</p>
+<!-- Sticky Navbar -->
+<header id="navbar">
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="darkModeToggle">Dark Mode</button></li>
+    </ul>
+  </nav>
 </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#sponsorship">Sponsorship</a>
-  <a href="#fanzone">Fan Zone</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#shop">Shop</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="home">
-  <h2>Home</h2>
-  <p>Stay connected with Mahi’s creative world of videos, football, and content!</p>
+<!-- Hero Section with Typing Animation -->
+<section id="home" class="hero">
+  <h1>Welcome to <span class="typing-text"></span></h1>
+  <p>Scroll down to explore 30 more features!</p>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>I'm Imran Hussain Mahi from Sylhet, Bangladesh. Director of Chacha Bhatiya Team, footballer, and passionate content creator.</p>
+<!-- FAQ Accordion -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <button class="accordion">What do you do?</button>
+  <div class="panel">I create content, direct dramas, and manage football events.</div>
+  
+  <button class="accordion">How can I sponsor?</button>
+  <div class="panel">Use our contact form or click on the sponsorship section.</div>
 </section>
 
-<section id="services">
-  <h2>Services</h2>
-  <ul>
-    <li>Video Direction & Editing</li>
-    <li>Football Event Management</li>
-    <li>Promotional Video Creation</li>
-    <li>Social Media Content Strategy</li>
-  </ul>
+<!-- Skills Progress -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skill">
+    <p>Video Editing</p>
+    <div class="skill-bar" style="width: 90%;">90%</div>
+  </div>
+  <div class="skill">
+    <p>Team Management</p>
+    <div class="skill-bar" style="width: 85%;">85%</div>
+  </div>
 </section>
 
-<section id="sponsorship">
-  <h2>Sponsorship Info</h2>
-  <p>Want to sponsor a video/event?</p>
-  <ul>
-    <li>500 BDT – Logo Placement</li>
-    <li>2000 BDT – Mid-roll Ad</li>
-    <li>5000 BDT – Full Sponsored Video</li>
-    <li>10,000 BDT – VIP Branding</li>
-  </ul>
+<!-- Testimonials Slider -->
+<section id="testimonials">
+  <h2>What People Say</h2>
+  <div class="slider">
+    <p id="testimonial">"Imran's work is outstanding!"</p>
+  </div>
 </section>
 
-<section id="fanzone">
-  <h2>Fan Zone</h2>
-  <p>Drop a message or follow me:</p>
-  <ul>
-    <li><a class="btn" href="https://facebook.com" target="_blank">Facebook</a></li>
-    <li><a class="btn" href="https://youtube.com" target="_blank">YouTube</a></li>
-    <li><a class="btn" href="https://tiktok.com" target="_blank">TikTok</a></li>
-  </ul>
+<!-- YouTube Video Embed -->
+<section>
+  <h2>Latest Video</h2>
+  <iframe width="300" height="200" src="https://www.youtube.com/embed/B9aUVm1UJJk" allowfullscreen></iframe>
 </section>
 
-<section id="gallery">
-  <h2>Gallery</h2>
-  <p>[Add your photo or video previews here]</p>
-</section>
-
-<section id="shop">
-  <h2>Our Products</h2>
-  <ul>
-    <li>Men’s T-Shirt – 450 BDT</li>
-    <li>Team Jersey – 800 BDT</li>
-  </ul>
-</section>
-
+<!-- Contact with WhatsApp -->
 <section id="contact">
   <h2>Contact Me</h2>
-  <p>Send a message anytime! [You can add a form later]</p>
+  <a href="https://wa.me/8801XXXXXXXXX" target="_blank">Message on WhatsApp</a>
 </section>
 
-<footer>
-  <p>&copy; 2025 Imran Hussain Mahi. All rights reserved.</p>
-</footer>
+<!-- Scroll to Top Button -->
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">Top</button>
 
+<!-- Cookie Consent -->
+<div id="cookieConsent">
+  <p>This site uses cookies to improve your experience.</p>
+  <button onclick="acceptCookies()">Accept</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+<!-- Testimonials Section -->
+<section id="testimonials" style="background: #f1f1f1; padding: 50px;">
+  <h2>What People Say</h2>
+  <blockquote>"Imran Mahi is an amazing director and entrepreneur!" - Rahim</blockquote>
+  <blockquote>"His football club events are top-notch!" - Karim</blockquote>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" style="padding: 50px;">
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>How can I sponsor?</summary>
+    <p>Visit the Sponsorship section and fill out the form.</p>
+  </details>
+  <details>
+    <summary>Can I join your team?</summary>
+    <p>Message us via the Contact section.</p>
+  </details>
+</section>
+
+<!-- Newsletter Subscription -->
+<section style="background: #ffc; padding: 50px;">
+  <h2>Subscribe to our Newsletter</h2>
+  <input type="email" placeholder="Enter your email" />
+  <button>Subscribe</button>
+</section>
+
+<!-- Progress Bar -->
+<section style="padding: 50px;">
+  <h2>Our Progress</h2>
+  <label>Website Completion</label>
+  <progress value="75" max="100"></progress>
+</section>
+
+<!-- Countdown Timer -->
+<section id="countdown" style="padding: 50px;">
+  <h2>Next Event Countdown</h2>
+  <div id="timer"></div>
+</section>
+
+<script>
+  const eventDate = new Date("2025-05-30T00:00:00").getTime();
+  const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("timer").innerHTML = "Event Started!";
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("timer").innerHTML = days + " days left";
+  }, 1000);
+</script>
+
+<!-- Animated Counters -->
+<section style="padding: 50px;">
+  <h2>Stats</h2>
+  <div>Fans: <span id="fans">0</span></div>
+  <div>Projects: <span id="projects">0</span></div>
+</section>
+
+<script>
+  let fanCount = 0, projectCount = 0;
+  const interval = setInterval(() => {
+    if (fanCount < 5000) {
+      fanCount += 100;
+      document.getElementById("fans").innerText = fanCount;
+    }
+    if (projectCount < 25) {
+      projectCount++;
+      document.getElementById("projects").innerText = projectCount;
+    }
+    if (fanCount >= 5000 && projectCount >= 25) clearInterval(interval);
+  }, 100);
+</script>
+
+<!-- Contact Form Extended -->
+<section id="extended-contact" style="padding: 50px; background: #eee;">
+  <h2>More Details? Contact Us!</h2>
+  <form>
+    <input type="text" placeholder="Your Full Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <input type="tel" placeholder="Phone Number" />
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- Services Cards with Icons -->
+<section id="advanced-services" style="padding: 50px; background: linear-gradient(to right, #fbd3e9, #bb377d);">
+  <h2>Our Core Services</h2>
+  <div style="display: flex; gap: 20px;">
+    <div style="flex: 1; background: white; padding: 20px; border-radius: 10px;">
+      <h3>Video Editing</h3>
+      <p>High-quality cinematic editing using modern software.</p>
+    </div>
+    <div style="flex: 1; background: white; padding: 20px; border-radius: 10px;">
+      <h3>Content Creation</h3>
+      <p>We build engaging, viral content for all platforms.</p>
+    </div>
+    <div style="flex: 1; background: white; padding: 20px; border-radius: 10px;">
+      <h3>Event Management</h3>
+      <p>Professional planning and organizing of football events.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Image Slider -->
+<section id="image-slider" style="padding: 50px;">
+  <h2>Highlights</h2>
+  <div style="width: 100%; overflow: hidden;">
+    <img src="https://via.placeholder.com/800x400" id="slide-img" style="width: 100%; transition: 1s;" />
+  </div>
+</section>
+
+<script>
+  const images = [
+    "https://via.placeholder.com/800x400/111111/ffffff?text=Drama+Shoot",
+    "https://via.placeholder.com/800x400/333333/ffffff?text=Football+Event",
+    "https://via.placeholder.com/800x400/555555/ffffff?text=Fan+Meetup"
+  ];
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    document.getElementById("slide-img").src = images[index];
+  }, 3000);
+</script>
+
+<!-- 3D Button Effects -->
+<section style="padding: 50px; text-align: center;">
+  <h2>Click Our 3D Buttons</h2>
+  <button style="padding: 15px 30px; font-size: 16px; border: none; background: #0ff; box-shadow: 0 5px 0 #0cc; transform: translateY(0); transition: 0.2s;" onmousedown="this.style.transform='translateY(5px)'" onmouseup="this.style.transform='translateY(0)'">
+    Click Me
+  </button>
+</section>
+
+<!-- Embedded Google Map -->
+<section style="padding: 50px; background: #fafafa;">
+  <h2>Our Location</h2>
+  <iframe src="https://maps.google.com/maps?q=Sylhet&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+</section>
+
+<!-- Call To Action Section -->
+<section style="padding: 50px; background: #282c34; color: white; text-align: center;">
+  <h2>Ready to Work with Mahi?</h2>
+  <p>Let’s create something amazing together!</p>
+  <a href="#contact" style="color: yellow; font-size: 18px;">Contact Now</a>
+</section>
+
+<!-- Neon Gradient Hero Banner -->
+<section style="padding: 100px 20px; background: radial-gradient(circle at top left, #ff00cc, #3333ff); color: white; text-align: center; font-family: 'Segoe UI', sans-serif;">
+  <h1 style="font-size: 50px; text-shadow: 2px 2px 10px black;">Welcome to Mahi's Universe</h1>
+  <p style="font-size: 20px; max-width: 600px; margin: auto;">Creative Director | Entrepreneur | Visionary</p>
+  <a href="#about" style="display: inline-block; margin-top: 20px; padding: 15px 30px; background: #00ffe1; color: #000; border-radius: 30px; font-weight: bold; box-shadow: 0 0 20px #00ffe1;">Discover More</a>
+</section>
+
+<!-- Floating Glowing Cards -->
+<section style="padding: 80px 20px; background: #0e0e52; color: white; font-family: Arial;">
+  <h2 style="text-align: center; font-size: 36px;">Featured Projects</h2>
+  <div style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; margin-top: 40px;">
+    <div style="background: #1b1b6b; padding: 25px; width: 280px; border-radius: 20px; box-shadow: 0 0 15px #00bfff; transition: transform 0.3s;">
+      <h3>Drama Direction</h3>
+      <p>Handled over 25+ local short films and comedy dramas with huge success.</p>
+    </div>
+    <div style="background: #1b1b6b; padding: 25px; width: 280px; border-radius: 20px; box-shadow: 0 0 15px #ff00ff; transition: transform 0.3s;">
+      <h3>Football Events</h3>
+      <p>Organized massive local tournaments and social initiatives.</p>
+    </div>
+    <div style="background: #1b1b6b; padding: 25px; width: 280px; border-radius: 20px; box-shadow: 0 0 15px #00ffcc; transition: transform 0.3s;">
+      <h3>Social Impact</h3>
+      <p>Created awareness videos and fan engagement projects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Glowing Hover Effects -->
+<style>
+  section div:hover {
+    transform: translateY(-10px);
+    transition: 0.4s ease;
+  }
+</style>
