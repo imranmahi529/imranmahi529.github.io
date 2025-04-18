@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imran Hussain Mahi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Intro Slide -->
+  <section id="intro" class="slide">
+    <div class="content">
+      <h1>স্বাগতম, আমি ইমরান হুসাইন মাহি</h1>
+      <p>ডিরেক্টর • কন্টেন্ট ক্রিয়েটর • অনলাইন উদ্যোক্তা</p>
+      <button onclick="nextSlide()">Start</button>
+    </div>
+  </section>
+
+  <!-- ২: পরিচিতি -->
+  <section id="about" class="slide">
+    <div class="content">
+      <h2>পরিচিতি</h2>
+      <p>আমি সিলেটের মুখী, ১৭ বছর বয়সী মিডিয়া প্রফেশনাল…</p>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ৩: সামাজিক লিঙ্ক -->
+  <section id="social" class="slide">
+    <div class="content">
+      <h2>Connect with me</h2>
+      <ul>
+        <li><a href="https://www.facebook.com/share/1EkoN2AS5s/">Facebook</a></li>
+        <li><a href="https://youtube.com/@imranhussainmahi177">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@imranmahi519">TikTok</a></li>
+      </ul>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ৪: ভিডিও/ফটো গ্যালারি -->
+  <section id="gallery" class="slide">
+    <div class="content">
+      <h2>Gallery</h2>
+      <!-- এখানে ইউটিউব এম্বেড বা ছবি কারাউসেল যুক্ত করবে -->
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ৫: সার্ভিসেস -->
+  <section id="services" class="slide">
+    <div class="content">
+      <h2>Services</h2>
+      <ul>
+        <li>ভিডিও প্রোডাকশন</li>
+        <li>ডিরেকশন ও এডিটিং</li>
+        <li>স্পন্সরশিপ</li>
+      </ul>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ৬: শপ/প্রোডাক্ট -->
+  <section id="shop" class="slide">
+    <div class="content">
+      <h2>Shop</h2>
+      <p>Coming Soon…</p>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ৭: ফ্যান সেকশন -->
+  <section id="fanzone" class="slide">
+    <div class="content">
+      <h2>Fan Zone</h2>
+      <p>কমেন্ট করে জানাও, তুমি কোথা থেকে দেখছ!</p>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ৮: স্পন্সরশিপ ইনফো -->
+  <section id="sponsor" class="slide">
+    <div class="content">
+      <h2>স্পন্সরশিপ</h2>
+      <p>ভিডিও স্পন্সর করতে ৫০০–১০,০০০ BDT</p>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ৯: কনট্যাক্ট ফর্ম -->
+  <section id="contact" class="slide">
+    <div class="content">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="তোমার নাম" required>
+        <input type="email" placeholder="ইমেইল" required>
+        <textarea placeholder="মেসেজ" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+  <!-- ১০: Outro -->
+  <section id="outro" class="slide">
+    <div class="content">
+      <h2>ধন্যবাদ!</h2>
+      <p>Follow, Like & Share</p>
+      <button onclick="goToSlide('intro')">Restart</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
