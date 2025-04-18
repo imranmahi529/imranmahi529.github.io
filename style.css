@@ -1,547 +1,91 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
-}
-header {
-  background: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-.hero {
-  margin-top: 20px;
-}
-section {
-  padding: 40px;
-  background: white;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #ccc;
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1b1c3e;
   color: white;
 }
-form input, form textarea {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-}
-button {
-  padding: 10px 20px;
-  background: #333;
-  color: white;
-  border: none;
-}body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  transition: background 0.5s, color 0.5s;
-}
-nav {
-  position: sticky;
-  top: 0;
-  background: #333;
-  padding: 10px;
-  z-index: 10;
-}
-nav ul {
-  list-style: none;
+
+.navbar {
   display: flex;
   justify-content: center;
+  gap: 20px;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  padding: 15px;
+  font-weight: bold;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-nav li {
-  margin: 0 10px;
-}
-nav a, button {
+
+.navbar a {
   color: white;
   text-decoration: none;
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-.hero {
-  text-align: center;
-  padding: 60px;
-  background: #f0f0f0;
-}
-.typing-text {
-  color: #ff6600;
-  font-weight: bold;
 }
 
-.accordion {
-  background-color: #eee;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  outline: none;
-  transition: background-color 0.3s;
-}
-.accordion:hover {
-  background-color: #ccc;
-}
-.panel {
-  padding: 0 15px;
-  display: none;
-  background-color: white;
-}
-.skill-bar {
-  background-color: #4CAF50;
-  color: white;
-  padding: 5px;
-  margin: 5px 0;
-}
-#scrollTopBtn {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  display: none;
-  padding: 10px;
-}
-#cookieConsent {
-  position: fixed;
-  bottom: 0;
-  background: #222;
-  color: white;
-  padding: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-body.dark-mode {
-  background: #121212;
-  color: #f0f0f0;
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
 }
 
-/* Body Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-/* Header Styling with Graffiti Theme */
-header {
-  background-color: #333;
+.box {
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url('graffiti-wall.jpg'); /* Graffiti wall image */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-header .logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: #ff6f61;
+.welcome {
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298);
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-}
-
-header nav ul li {
-  margin: 0 15px;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  color: #ff6f61;
-}
-
-/* Hero Section with Graffiti Background */
-.hero {
-  background-image: url('graffiti-hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 100px 0;
-  text-align: center;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 20px;
-  font-family: 'Courier New', Courier, monospace;
-  letter-spacing: 2px;
-}
-
-.hero p {
-  font-size: 24px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/* Content Section with Graffiti Style Cards */
-.content {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-  background-color: #fff;
-  padding: 40px 0;
-}
-
-.card {
-  background-color: #f1f1f1;
-  width: 30%;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card h2 {
-  font-size: 24px;
-  font-family: 'Courier New', Courier, monospace;
-  margin-bottom: 15px;
-}
-
-.card p {
-  font-size: 16px;
-  color: #666;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/* Footer Styling with Graffiti Theme */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-/* Graffiti Background Styles */
-body, header, .hero {
-  background-image: url('graffiti-background.jpg'); /* Graffiti background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Custom Graffiti Fonts */
-h1, h2, p {
-  font-family: 'Permanent Marker', cursive, sans-serif;
-}
-
-/* Animation for Graffiti Style */
-@keyframes graffitiEffect {
-  0% {
-    transform: scale(1);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.hero {
-  animation: graffitiEffect 4s infinite;
-}/* Glitch Effect */
-.glitch {
-  position: relative;
-  font-size: 48px;
-  color: #ff6f61;
-  font-family: 'Permanent Marker', cursive;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
+.about {
+  background: linear-gradient(to bottom right, #00c9a7, #92fe9d);
   color: #000;
-  clip: rect(0, 900px, 0, 0);
-  animation: glitch-anim 3s infinite linear alternate-reverse;
 }
 
-.glitch::after {
-  color: #0ff;
-  clip: rect(0, 900px, 0, 0);
-  animation: glitch-anim 3s infinite linear alternate-reverse 0.2s;
+.shop {
+  background: linear-gradient(to bottom right, #f953c6, #b91d73);
 }
 
-@keyframes glitch-anim {
-  0% {
-    transform: translate(2px, -2px);
-  }
-  20% {
-    transform: translate(-4px, 4px);
-  }
-  40% {
-    transform: translate(2px, 2px);
-  }
-  60% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(4px, -4px);
-  }
-  100% {
-    transform: translate(-2px, 2px);
-  }
+.shop-products {
+  background: linear-gradient(to bottom right, #f9d423, #ff4e50);
 }
 
-/* Neon Light Effect */
-.neon {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 80px;
-  color: #fff;
-  text-shadow: 
-    0 0 5px #ff6f61, 
-    0 0 10px #ff6f61, 
-    0 0 15px #ff6f61, 
-    0 0 20px #ff6f61, 
-    0 0 25px #ff6f61;
-  animation: neon 1.5s ease-in-out infinite alternate;
+.sponsorship {
+  background: linear-gradient(to bottom right, #396afc, #2948ff);
 }
 
-@keyframes neon {
-  0% {
-    text-shadow: 
-      0 0 5px #ff6f61, 
-      0 0 10px #ff6f61, 
-      0 0 15px #ff6f61;
-  }
-  100% {
-    text-shadow: 
-      0 0 20px #ff6f61, 
-      0 0 30px #ff6f61, 
-      0 0 40px #ff6f61, 
-      0 0 50px #ff6f61;
-  }
+.fan.orange {
+  background: linear-gradient(to bottom right, #f7971e, #ffd200);
+  color: #000;
 }
 
-/* Broken Glass Effect */
-.broken-glass {
-  font-size: 50px;
-  color: #ff6f61;
-  font-family: 'Permanent Marker', cursive;
-  position: relative;
+.fan.purple {
+  background: linear-gradient(to bottom right, #da22ff, #9733ee);
 }
 
-.broken-glass::before,
-.broken-glass::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('shattered-glass.png'); /* Shattered glass effect */
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  animation: broken-glass-effect 4s infinite;
+.contact {
+  background: linear-gradient(to bottom right, #00c6ff, #0072ff);
 }
 
-@keyframes broken-glass-effect {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  font-size: 24px;
 }
 
-/* Colorful Typo Effect */
-.typography-effect {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 60px;
-  background: linear-gradient(to right, #ff6f61, #ffcd00, #ff00cc, #00ff00);
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: typography-anim 3s ease infinite;
+button {
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-@keyframes typography-anim {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Fire Flame Animation */
-.fire-flame {
-  position: relative;
-  font-size: 80px;
-  color: #ff6f61;
-  font-family: 'Permanent Marker', cursive;
-}
-
-.fire-flame::after {
-  content: '🔥';
-  position: absolute;
-  top: -15px;
-  left: 0;
-  animation: fire-anim 2s infinite alternate;
-}
-
-@keyframes fire-anim {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-
-/* Paint Splash Effect */
-.paint-splash {
-  background-image: url('paint-splash.png'); /* Add a paint splash image */
-  background-size: cover;
-  background-position: center;
-  padding: 50px;
-  text-align: center;
-}
-
-.paint-splash h2 {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 60px;
-  color: #ff6f61;
-}
-
-/* 3D Text Effect */
-.three-d-text {
-  font-size: 60px;
-  color: #ff6f61;
-  text-shadow: 
-    3px 3px 0 #ff6f61,
-    6px 6px 0 #ff6f61,
-    9px 9px 0 #ff6f61;
-}
-
-/* Pixelated Text Effect */
-.pixelated-text {
-  font-size: 60px;
-  color: #ff6f61;
-  font-family: 'Courier New', Courier, monospace;
-  letter-spacing: 5px;
-  background-image: url('pixelated-text.png'); /* Pixelated text effect image */
-  background-size: cover;
-  animation: pixelated-effect 3s infinite;
-}
-
-@keyframes pixelated-effect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Color Changing Background Animation */
-.color-change-background {
-  background: linear-gradient(90deg, #ff6f61, #ff00cc, #00ff00);
-  background-size: 300% 300%;
-  animation: color-background 5s ease infinite;
-}
-
-@keyframes color-background {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Glow Ripple Effect */
-.glow-ripple {
-  position: relative;
-  font-size: 50px;
-  color: #ff6f61;
-  text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
-}
-
-.glow-ripple::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 111, 97, 0.3);
-  border-radius: 50%;
-  animation: glow-ripple-anim 3s infinite;
-}
-
-@keyframes glow-ripple-anim {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
+button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
