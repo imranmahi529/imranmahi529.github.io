@@ -1,258 +1,202 @@
-/* Glitch Effect */
-.glitch {
-  position: relative;
-  font-size: 48px;
-  color: #ff6f61;
-  font-family: 'Permanent Marker', cursive;
+/* ================= Base Styles ================= */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1b1c3e;
+  color: white;
 }
 
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  padding: 15px;
+  font-weight: bold;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid for index page */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Box common */
+.box {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual box gradients */
+.welcome {
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+}
+
+.about {
+  background: linear-gradient(to bottom right, #00c9a7, #92fe9d);
   color: #000;
-  clip: rect(0, 900px, 0, 0);
-  animation: glitch-anim 3s infinite linear alternate-reverse;
 }
 
-.glitch::after {
-  color: #0ff;
-  clip: rect(0, 900px, 0, 0);
-  animation: glitch-anim 3s infinite linear alternate-reverse 0.2s;
+.shop {
+  background: linear-gradient(to bottom right, #f953c6, #b91d73);
 }
 
-@keyframes glitch-anim {
-  0% {
-    transform: translate(2px, -2px);
-  }
-  20% {
-    transform: translate(-4px, 4px);
-  }
-  40% {
-    transform: translate(2px, 2px);
-  }
-  60% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(4px, -4px);
-  }
-  100% {
-    transform: translate(-2px, 2px);
-  }
+.shop-products {
+  background: linear-gradient(to bottom right, #f9d423, #ff4e50);
 }
 
-/* Neon Light Effect */
-.neon {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 80px;
-  color: #fff;
-  text-shadow: 
-    0 0 5px #ff6f61, 
-    0 0 10px #ff6f61, 
-    0 0 15px #ff6f61, 
-    0 0 20px #ff6f61, 
-    0 0 25px #ff6f61;
-  animation: neon 1.5s ease-in-out infinite alternate;
+.sponsorship {
+  background: linear-gradient(to bottom right, #396afc, #2948ff);
 }
 
-@keyframes neon {
-  0% {
-    text-shadow: 
-      0 0 5px #ff6f61, 
-      0 0 10px #ff6f61, 
-      0 0 15px #ff6f61;
-  }
-  100% {
-    text-shadow: 
-      0 0 20px #ff6f61, 
-      0 0 30px #ff6f61, 
-      0 0 40px #ff6f61, 
-      0 0 50px #ff6f61;
-  }
+.fan.orange {
+  background: linear-gradient(to bottom right, #f7971e, #ffd200);
+  color: #000;
 }
 
-/* Broken Glass Effect */
-.broken-glass {
-  font-size: 50px;
-  color: #ff6f61;
-  font-family: 'Permanent Marker', cursive;
+.fan.purple {
+  background: linear-gradient(to bottom right, #da22ff, #9733ee);
+}
+
+.contact {
+  background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+}
+
+/* Icons in index */
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+/* Button/link styling */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ================= Blog Page Styles ================= */
+
+/* Blog container with decorative shapes */
+.blog-container {
   position: relative;
+  display: flex;
+  gap: 30px;
+  padding: 60px 30px;
+  background: #f9f0e3;
+  overflow: hidden;
 }
 
-.broken-glass::before,
-.broken-glass::after {
-  content: "";
+/* Abstract blob shapes */
+.shape {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('shattered-glass.png'); /* Shattered glass effect */
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  animation: broken-glass-effect 4s infinite;
+  z-index: 1;
+}
+.shape1 {
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: #f28f3b;
+  border-radius: 50% 50% 0 0;
+}
+.shape2 {
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: #3caea3;
+  border-radius: 0 50% 50% 0;
 }
 
-@keyframes broken-glass-effect {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
-
-/* Colorful Typo Effect */
-.typography-effect {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 60px;
-  background: linear-gradient(to right, #ff6f61, #ffcd00, #ff00cc, #00ff00);
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: typography-anim 3s ease infinite;
-}
-
-@keyframes typography-anim {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Fire Flame Animation */
-.fire-flame {
+/* Article styles */
+.post {
+  flex: 3;
   position: relative;
-  font-size: 80px;
-  color: #ff6f61;
-  font-family: 'Permanent Marker', cursive;
+  z-index: 2;
+  color: #333;
 }
-
-.fire-flame::after {
-  content: '🔥';
-  position: absolute;
-  top: -15px;
-  left: 0;
-  animation: fire-anim 2s infinite alternate;
+.post h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
-
-@keyframes fire-anim {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
+.post-meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
 }
-
-/* Paint Splash Effect */
-.paint-splash {
-  background-image: url('paint-splash.png'); /* Add a paint splash image */
-  background-size: cover;
-  background-position: center;
-  padding: 50px;
-  text-align: center;
-}
-
-.paint-splash h2 {
-  font-family: 'Permanent Marker', cursive;
-  font-size: 60px;
-  color: #ff6f61;
-}
-
-/* 3D Text Effect */
-.three-d-text {
-  font-size: 60px;
-  color: #ff6f61;
-  text-shadow: 
-    3px 3px 0 #ff6f61,
-    6px 6px 0 #ff6f61,
-    9px 9px 0 #ff6f61;
-}
-
-/* Pixelated Text Effect */
-.pixelated-text {
-  font-size: 60px;
-  color: #ff6f61;
-  font-family: 'Courier New', Courier, monospace;
-  letter-spacing: 5px;
-  background-image: url('pixelated-text.png'); /* Pixelated text effect image */
-  background-size: cover;
-  animation: pixelated-effect 3s infinite;
-}
-
-@keyframes pixelated-effect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Color Changing Background Animation */
-.color-change-background {
-  background: linear-gradient(90deg, #ff6f61, #ff00cc, #00ff00);
-  background-size: 300% 300%;
-  animation: color-background 5s ease infinite;
-}
-
-@keyframes color-background {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Glow Ripple Effect */
-.glow-ripple {
-  position: relative;
-  font-size: 50px;
-  color: #ff6f61;
-  text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
-}
-
-.glow-ripple::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.featured-img {
   width: 100%;
-  height: 100%;
-  background: rgba(255, 111, 97, 0.3);
-  border-radius: 50%;
-  animation: glow-ripple-anim 3s infinite;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.post-content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
 }
 
-@keyframes glow-ripple-anim {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+.sidebar section {
+  margin-bottom: 40px;
+}
+.sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin-bottom: 8px;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #0077cc;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* ================= Language Toggle ================= */
+/* By default show English, hide Bengali */
+.lang { display: none; }
+.lang.en { display: block; }
+/* When Bengali is active */
+body.lang-bn .lang.en { display: none; }
+body.lang-bn .lang.bn { display: block; }
+
+/* RTL fix for Bengali navbar */
+body.lang-bn .navbar {
+  direction: rtl;
 }
