@@ -1,6 +1,25 @@
-<form action="mailto:imahi6791@gmail.com" method="post" enctype="text/plain">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message"></textarea>
-  <button type="submit">Send</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main class="card">
+    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+      <label>Your Name:</label><br>
+      <input type="text" name="name"><br>
+      <label>Your Message:</label><br>
+      <textarea name="message" rows="5"></textarea><br>
+      <input type="submit" value="Send">
+    </form>
+  </main>
+</body>
+</html>
