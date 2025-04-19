@@ -3,79 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog Post – Imran Hussain Mahi</title>
+  <title>Imran Hussain Mahi’s World</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Navbar + Language Switcher -->
+  <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="index.html#shop">Shop</a>
-    <a href="sponsorship.html">Sponsorship</a>
-    <a href="contact.html">Contact</a>
-
-    <div class="lang-switch">
-      <button id="btn-bn">বাংলা</button>
-      <button id="btn-en" style="display:none">English</button>
-    </div>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Shop</a>
+    <a href="#">Sponsorship</a>
+    <a href="#">Contact</a>
   </nav>
 
-  <!-- Blog Container with background shapes -->
-  <div class="blog-container">
-    <!-- Decorative shapes -->
-    <div class="shape shape1"></div>
-    <div class="shape shape2"></div>
+  <!-- Main Grid -->
+  <div class="grid-container">
 
-    <!-- Main Article -->
-    <article class="post">
-      <h1 class="lang en">Blog Post Title</h1>
-      <h1 class="lang bn">ব্লগ পোস্টের শিরোনাম</h1>
-
-      <div class="post-meta">
-        <span class="lang en">Published on April 26, 2022</span>
-        <span class="lang bn">প্রকাশিত: এপ্রিল ২৬, ২০২২</span>
+    <div class="box welcome">
+      <h1>Welcome to <br>Imran Hussain Mahi’s World</h1>
+      <p>Content Creator | Director | Entrepreneur</p>
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-tiktok"></i>
       </div>
+    </div>
 
-      <img src="images/featured.png" alt="Featured image" class="featured-img">
+    <div class="box about">
+      <h2>About Me</h2>
+      <p>Hi. I’m Imran Hussain Mani from Sylhet, Bangladesh,<br>
+         I’m a passionate director, content creator, and online entrepreneur.</p>
+      <button>Read More</button>
+    </div>
 
-      <div class="post-content">
-        <p class="lang en">
-          This is a sample paragraph in English. You can replace it with your actual content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-        <p class="lang bn">
-          এটা বাংলা ভাষায় উদাহরণ প্যারাগ্রাফ। আপনার আসল কন্টেন্ট দিয়ে রিপ্লেস করুন। লরেম ইপসাম ডলর সিট আমেত, কনসেকটetur adipiscing elit.
-        </p>
+    <div class="box shop">
+      <h2>Shop</h2>
+      <p>Photo & Video Gallery</p>
+      <ul>
+        <li>Drama/video Direction & Editing</li>
+        <li>Promotional video Creation</li>
+        <li>Football Event Management</li>
+      </ul>
+      <button>Learn More</button>
+    </div>
+
+    <div class="box shop-products">
+      <h2>Shop</h2>
+      <p>Shop Products</p>
+      <button>View Gallery</button>
+    </div>
+
+    <div class="box sponsorship">
+      <h2>Sponsorship</h2>
+      <p>Want to sponsor any of our videos or events?</p>
+      <button>Get Details</button>
+    </div>
+
+    <div class="box fan orange">
+      <h2>Fan Zone</h2>
+      <p>We love hearing from our fans! Drop a message or follow us on social media.</p>
+      <button>View Gallery</button>
+    </div>
+
+    <div class="box contact">
+      <h2>Contact Me</h2>
+      <button>Send Message</button>
+    </div>
+
+    <div class="box fan purple">
+      <h2>Fan Zone</h2>
+      <p>We love hearing from our fans! Drop a message or follow us on social media.</p>
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-tiktok"></i>
       </div>
-    </article>
+    </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <!-- Categories -->
-      <section class="categories">
-        <h3 class="lang en">Categories</h3>
-        <h3 class="lang bn">বিভাগসমূহ</h3>
-        <ul>
-          <li><a href="#">Category One</a></li>
-          <li><a href="#">Category Two</a></li>
-          <li><a href="#">Category Three</a></li>
-        </ul>
-      </section>
-
-      <!-- Related Posts -->
-      <section class="related-posts">
-        <h3 class="lang en">Related Posts</h3>
-        <h3 class="lang bn">সম্পর্কিত পোস্টসমূহ</h3>
-        <ul>
-          <li><a href="#">Post Title 1</a></li>
-          <li><a href="#">Post Title 2</a></li>
-          <li><a href="#">Post Title 3</a></li>
-        </ul>
-      </section>
-    </aside>
   </div>
 
 </body>
