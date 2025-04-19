@@ -7,47 +7,23 @@ body {
 
 header {
   background: linear-gradient(90deg, #2b2bb2, #9e00b5);
-  padding: 25px;
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.welcome {
-  text-align: center;
-  padding: 40px;
-  background: radial-gradient(circle, #ff0080, #ff8c00);
-  margin: 30px;
-  border-radius: 30px;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  padding: 30px;
-}
-
-.feature-card {
-  background: linear-gradient(145deg, #ff4d4d, #ffcc00);
+nav a {
+  margin: 0 10px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+.card {
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(145deg, #ff0080, #ff8c00);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 footer {
