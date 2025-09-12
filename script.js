@@ -44,3 +44,25 @@ document.getElementById("darkModeToggle").addEventListener("click", () => {
 function playGame() {
   document.getElementById("gameArea").innerHTML = "<p>🎮 Snake Game Coming Soon!</p>";
 }
+
+
+// Simple Game (Demo)
+function playGame() {
+  document.getElementById("gameArea").innerHTML = "<p>🎮 Snake Game Coming Soon!</p>";
+  alert("Snake Game Coming Soon!");
+}
+
+// Fan Comments
+function addComment() {
+  let commentBox = document.getElementById("fanComment");
+  let commentsList = document.getElementById("commentsList");
+
+  if (commentBox.value.trim() !== "") {
+    let newComment = document.createElement("p");
+    newComment.textContent = "⭐ " + commentBox.value;
+    commentsList.appendChild(newComment);
+    commentBox.value = "";
+  } else {
+    alert("Please write something before submitting!");
+  }
+}
