@@ -39,3 +39,8 @@ function acceptCookies() {
 document.getElementById("darkModeToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
+
+
+function playGame() {
+  document.getElementById("gameArea").innerHTML = "<p>🎮 Snake Game Coming Soon!</p>";
+}
