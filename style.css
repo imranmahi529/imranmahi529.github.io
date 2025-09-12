@@ -74,3 +74,20 @@ section h2 {
   border-radius: 12px;
   width: 250px;
 }
+
+
+#games {
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+}
+
+#games button {
+  padding: 10px 20px;
+  border: none;
+  background: #00ffea;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+}
