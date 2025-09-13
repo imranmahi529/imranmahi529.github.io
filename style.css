@@ -218,3 +218,30 @@ footer {
   padding: 20px;
   margin-top: 30px;
 }
+
+/* Body Background */
+body {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('https://i.ibb.co/5sS5t0S/graffiti-wall.jpg') no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* 3D Graffiti Header */
+header h1 {
+  font-family: 'Rubik Spray Paint', cursive;
+  font-size: 4rem;
+  color: #ff00ff;
+  text-shadow: 
+    2px 2px 0 #000,
+    4px 4px 0 #00ffff,
+    6px 6px 0 #000,
+    8px 8px 0 #ff0080;
+  animation: neon-glow 2s infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% { text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff00ff, 6px 6px 0 #000; }
+  50% { text-shadow: 2px 2px 5px #00ffff, 4px 4px 10px #ff0080, 6px 6px 15px #00ffea; }
+  100% { text-shadow: 2px 2px 10px #ff00ff, 4px 4px 20px #00ffff, 6px 6px 30px #ff0080; }
+}
