@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahi's Zone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+    }
+    h1 { margin: 20px 0; font-size: 2.5rem; color: #ffcc00; }
+
+    /* Feature menu */
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .menu button {
+      width: 120px;
+      height: 60px;
+      background: #ff5722;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .menu button:hover {
+      background: #ff9800;
+      transform: scale(1.1);
+    }
+
+    /* Sections */
+    .section {
+      display: none;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      border: 2px solid #ffcc00;
+    }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 Welcome to Mahi's Zone 🔥</h1>
+
+  <!-- Feature Menu (50 Buttons) -->
+  <div class="menu">
+    <!-- Buttons auto generated -->
+    <script>
+      for (let i = 1; i <= 50; i++) {
+        document.write(`<button onclick="showSection('feature${i}')">Feature ${i}</button>`);
+      }
+    </script>
+  </div>
+
+  <!-- Sections (50 Content Areas) -->
+  <div id="sections">
+    <script>
+      for (let i = 1; i <= 50; i++) {
+        document.write(`<div id="feature${i}" class="section">⭐ এখানে Feature ${i} এর কনটেন্ট আসবে ⭐</div>`);
+      }
+    </script>
+  </div>
+
+  <script>
+    function showSection(id) {
+      let sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
