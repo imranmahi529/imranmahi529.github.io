@@ -17,7 +17,6 @@
     </nav>
   </header>
 
-https://github.com/imranmahi529/imranmahi529.github.io/blob/main/retouch_2025083123245637.jpg
 
   <!-- Hero Section -->
   <section class="hero" id="home">
@@ -392,7 +391,7 @@ https://github.com/imranmahi529/imranmahi529.github.io/blob/main/retouch_2025083
   </section>
   
   <!-- Dummy Sections 11-50 -->
-  <section id="Mahi's zone"><h2>Feature 11 Content</h2></section>
+  <section id="Mahi's zone"><h2>Feature 11 Content</h2></section>https://github.com/imranmahi529/imranmahi529.github.io/blob/main/retouch_2025083123245637.jpg
   <section id="Ai"><h2>Feature 12 Content</h2></section>
   <section id="Course"><h2>Feature 13 Content</h2></section>
   <section id="Travel guide"><h2>Feature 14 Content</h2></section>
@@ -409,133 +408,6 @@ https://github.com/imranmahi529/imranmahi529.github.io/blob/main/retouch_2025083
       document.getElementById(id).classList.add("active");
     }
   </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shooter Game</title>
-<style>
-  body { margin: 0; padding: 0; text-align: center; background: #222; color: #fff; font-family: Arial, sans-serif; }
-  canvas { background: #111; display: block; margin: 20px auto; border: 2px solid #fff; }
-  h1 { color: #0ff; }
-</style>
-</head>
-<body>
-<h1>Shooter Game</h1>
-<canvas id="gameCanvas" width="500" height="400"></canvas>
-<script>
-const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
-
-// Player
-let playerWidth = 50;
-let playerHeight = 20;
-let playerX = (canvas.width - playerWidth)/2;
-let playerY = canvas.height - playerHeight - 10;
-let playerSpeed = 5;
-
-// Bullet
-let bullets = [];
-let bulletWidth = 5;
-let bulletHeight = 10;
-let bulletSpeed = 5;
-
-// Enemy
-let enemies = [];
-let enemyWidth = 40;
-let enemyHeight = 20;
-let enemySpeed = 2;
-let spawnRate = 90; // frames
-let frameCount = 0;
-
-let score = 0;
-
-// Draw Player
-function drawPlayer() {
-  ctx.fillStyle = "#00f";
-  ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
-}
-
-// Draw Bullets
-function drawBullets() {
-  ctx.fillStyle = "#ff0";
-  bullets.forEach(b => ctx.fillRect(b.x, b.y, bulletWidth, bulletHeight));
-}
-
-// Draw Enemies
-function drawEnemies() {
-  ctx.fillStyle = "#f00";
-  enemies.forEach(e => ctx.fillRect(e.x, e.y, enemyWidth, enemyHeight));
-}
-
-// Draw Score
-function drawScore() {
-  ctx.fillStyle = "#0f0";
-  ctx.font = "20px Arial";
-  ctx.fillText("Score: " + score, 10, 30);
-}
-
-// Update Game
-function update() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  drawPlayer();
-  drawBullets();
-  drawEnemies();
-  drawScore();
-  
-  // Move bullets
-  bullets.forEach((b, i) => {
-    b.y -= bulletSpeed;
-    // Remove off-screen bullets
-    if(b.y + bulletHeight < 0) bullets.splice(i,1);
-  });
-  
-  // Move enemies
-  enemies.forEach((e, i) => {
-    e.y += enemySpeed;
-    // Check collision with player
-    if(e.y + enemyHeight > playerY && e.x < playerX + playerWidth && e.x + enemyWidth > playerX) {
-      alert("Game Over! Score: " + score);
-      document.location.reload();
-    }
-    // Remove off-screen enemies
-    if(e.y > canvas.height) enemies.splice(i,1);
-  });
-  
-  // Check bullet-enemy collisions
-  bullets.forEach((b, bi) => {
-    enemies.forEach((e, ei) => {
-      if(b.x < e.x + enemyWidth && b.x + bulletWidth > e.x && b.y < e.y + enemyHeight && b.y + bulletHeight > e.y) {
-        bullets.splice(bi,1);
-        enemies.splice(ei,1);
-        score++;
-      }
-    });
-  });
-  
-  // Spawn enemies
-  frameCount++;
-  if(frameCount % spawnRate === 0) {
-    let enemyX = Math.random() * (canvas.width - enemyWidth);
-    enemies.push({x: enemyX, y: -enemyHeight});
-  }
-  
-  requestAnimationFrame(update);
-}
-
-// Player movement
-document.addEventListener("keydown", (e) => {
-  if(e.key === "ArrowLeft" && playerX > 0) playerX -= playerSpeed;
-  if(e.key === "ArrowRight" && playerX + playerWidth < canvas.width) playerX += playerSpeed;
-  if(e.key === " ") bullets.push({x: playerX + playerWidth/2 - bulletWidth/2, y: playerY});
-});
-
-update();
-</script>
 </body>
 </html>
 
