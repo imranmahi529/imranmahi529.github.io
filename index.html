@@ -1,521 +1,120 @@
-<section id="index.html" style="text-align:center; padding:50px; background:#f8f9fa;">
-  <h2>About Me</h2>
-  <img src="https://raw.githubusercontent.com/imranmahi529/imranmahi529.github.io/main/retouch_2025100514040064.jpg" 
-       alt="Imran Hussain Mahi" 
-       width="250" 
-       style="border-radius:50%; box-shadow:0 0 20px rgba(0,0,0,0.3); margin:20px;">
-  <p style="font-size:18px; max-width:600px; margin:auto;">
-    Hi! I'm <b>Imran Hussain Mahi</b> — a young entrepreneur, director, and content creator from Sylhet, Bangladesh.  
-    I love travelling, football, and creating new digital projects. 🌍🎬⚽
-  </p>
-</section>
-
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahi's Zone</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahi Life Animation</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #c9f7ff, #ffffff);
+    overflow-x: hidden;
+  }
+
+  .life-section {
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 0 #fff;
+  }
+
+  .timeline {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .stage {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 80px;
+    padding: 40px 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+
+  .stage img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .stage h3 {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #333;
+  }
+
+  .stage p {
+    color: #555;
+    font-size: 1em;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .road {
+    width: 8px;
+    background: linear-gradient(to bottom, #008cff, #00ffaa);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 4px;
+  }
+</style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Mahi's Zone</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#motivation">Motivation</a>
-    </nav>
-  </header>
 
+<section class="life-section">
+  <h2>🌿 Mahi Life Journey</h2>
+  <div class="timeline">
+    <div class="road"></div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <h2>Welcome to Mahi's Zone</h2>
-    <p>তারুণ্যের শক্তি, ভবিষ্যতের দিশা</p>
-    <button>Join Now</button>
-    <button>Explore</button>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      আমি <strong>ইমরান হুসাইন মাহি</strong>। একজন তরুণ উদ্যোক্তা, ওয়েব ডিজাইনার, 
-      ডিজিটাল মার্কেটার এবং কনটেন্ট ক্রিয়েটর। আমার লক্ষ্য তরুণদের জন্য একটি 
-      প্ল্যাটফর্ম তৈরি করা যেখানে শিক্ষা, ক্যারিয়ার, খেলাধুলা, ব্যবসা ও বিনোদন 
-      সবকিছু একসাথে পাওয়া যাবে।
-    </p>
-  </section>
-
-  <!-- Motivation Section -->
-  <section id="motivation">
-    <h2>Youth Motivation</h2>
-    <div class="card-container">
-      <div class="card">💡 সময়ের সঠিক ব্যবহারই সফলতার চাবিকাঠি।</div>
-      <div class="card">🏃 শরীরচর্চা করো, সুস্থ থেকো।</div>
-      <div class="card">🚀 প্রতিদিন নতুন কিছু শিখো, এগিয়ে যাবে।</div>
-    </div>
-  </section>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahi's Zone</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-  <main>
-    <div class="feature-container">
-      <!-- ৫০টা ফিচার কার্ড -->
-      <div class="feature-card" onclick="openFeature('game1')">🎮 গেম ১</div>
-      <div class="feature-card" onclick="openFeature('game2')">🎮 গেম ২</div>
-      <div class="feature-card" onclick="openFeature('gallery')">🖼️ গ্যালারি</div>
-      <div class="feature-card" onclick="openFeature('review')">⭐ রিভিউ</div>
-      <div class="feature-card" onclick="openFeature('chat')">💬 লাইভ চ্যাট</div>
-      <div class="feature-card" onclick="openFeature('music')">🎵 মিউজিক প্লেয়ার</div>
-      <div class="feature-card" onclick="openFeature('video')">🎥 ভিডিও প্লেয়ার</div>
-      <div class="feature-card" onclick="openFeature('shop')">🛒 শপ সিস্টেম</div>
-      <div class="feature-card" onclick="openFeature('profile')">👤 প্রোফাইল</div>
-      <div class="feature-card" onclick="openFeature('language')">🌍 মাল্টি-ল্যাংগুয়েজ</div>
-      <!-- এখান থেকে ৪০টা আরও কার্ড যুক্ত করবো -->
-      <div class="feature-card">📅 ক্যালেন্ডার</div>
-      <div class="feature-card">📊 ড্যাশবোর্ড</div>
-      <div class="feature-card">📝 নোটপ্যাড</div>
-      <div class="feature-card">📚 লার্নিং জোন</div>
-      <div class="feature-card">📰 নিউজ ফিড</div>
-      <div class="feature-card">⚽ স্পোর্টস আপডেট</div>
-      <div class="feature-card">💡 কুইজ</div>
-      <div class="feature-card">📈 মার্কেট ট্রেন্ড</div>
-      <div class="feature-card">🔐 লগইন</div>
-      <div class="feature-card">🖌️ ড্রইং প্যাড</div>
-      <div class="feature-card">💻 কোড এডিটর</div>
-      <div class="feature-card">📷 ফটো এডিটর</div>
-      <div class="feature-card">🎤 ভয়েস রেকর্ডার</div>
-      <div class="feature-card">📞 কল ফিচার</div>
-      <div class="feature-card">💬 কমেন্ট সিস্টেম</div>
-      <div class="feature-card">⭐ ইউজার রেটিং</div>
-      <div class="feature-card">🎉 ইভেন্ট ম্যানেজার</div>
-      <div class="feature-card">🛫 ট্রাভেল গাইড</div>
-      <div class="feature-card">🍔 ফুড জোন</div>
-      <div class="feature-card">💼 জব পোর্টাল</div>
-      <div class="feature-card">📖 ই-বুক</div>
-      <div class="feature-card">🎬 মুভি জোন</div>
-      <div class="feature-card">🕹️ গেমিং এরিয়া</div>
-      <div class="feature-card">💎 প্রিমিয়াম ফিচার</div>
-      <div class="feature-card">🔔 নোটিফিকেশন</div>
-      <div class="feature-card">🎯 গোল ট্র্যাকার</div>
-      <div class="feature-card">💰 ফাইনান্স টুলস</div>
-      <div class="feature-card">📧 ইমেইল সিস্টেম</div>
-      <div class="feature-card">⚙️ সেটিংস</div>
-      <div class="feature-card">🎨 থিম চেঞ্জ</div>
-      <div class="feature-card">📍 লোকেশন ম্যাপ</div>
-      <div class="feature-card">📡 লাইভ স্ট্রিম</div>
-      <div class="feature-card">🔊 এফএম রেডিও</div>
-      <div class="feature-card">🎲 মিনি গেম</div>
-      <div class="feature-card">📌 টু-ডু লিস্ট</div>
-      <div class="feature-card">🎁 গিফট সিস্টেম</div>
-      <div class="feature-card">🔥 ট্রেন্ডিং</div>
-      <div class="feature-card">⚡ ফ্ল্যাশ নিউজ</div>
-      <div class="feature-card">💝 ফ্যান জোন</div>
-      <div class="feature-card">🎶 টপ মিউজিক</div>
-      <div class="feature-card">💎 এক্সক্লুসিভ</div>
+    <div class="stage">
+      <img src="https://cdn-icons-png.flaticon.com/512/4333/4333609.png" alt="Childhood">
+      <h3>শৈশব</h3>
+      <p>স্বপ্নভরা এক ছোট্ট জীবন — রঙিন খেলাধুলা আর কৌতূহলে ভরা দিনগুলো।</p>
     </div>
 
-    <!--mahi's world-->
-    <section id="game1" class="feature-section">এখানে গেম ১ আসবে</section>
-    <section id="game2" class="feature-section">এখানে গেম ২ আসবে</section>
-    <section id="gallery" class="feature-section">গ্যালারি ছবি এখানে</section>
-    <section id="review" class="feature-section">রিভিউ সিস্টেম</section>
-    <section id="chat" class="feature-section">লাইভ চ্যাট</section>
-    <section id="music" class="feature-section">মিউজিক প্লেয়ার</section>
-    <section id="video" class="feature-section">ভিডিও প্লেয়ার</section>
-    <section id="shop" class="feature-section">শপিং সিস্টেম</section>
-    <section id="profile" class="feature-section">প্রোফাইল</section>
-    <section id="language" class="feature-section">মাল্টি-ল্যাংগুয়েজ</section>
-  </main>
+    <div class="stage">
+      <img src="https://cdn-icons-png.flaticon.com/512/3097/3097130.png" alt="Student">
+      <h3>শিক্ষার্থী জীবন</h3>
+      <p>পরিশ্রম, শিক্ষা আর নিজের স্বপ্নকে ছোঁয়ার প্রথম পদক্ষেপ এখানেই শুরু।</p>
+    </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class="stage">
+      <img src="https://cdn-icons-png.flaticon.com/512/6791/6791053.png" alt="Dreamer">
+      <h3>স্বপ্নবাজ</h3>
+      <p>নিজেকে চিনে নতুন কিছু করার আগ্রহে এগিয়ে চলা — থেমে না থাকা পথচলা।</p>
+    </div>
 
+    <div class="stage">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Success">
+      <h3>সাফল্যের পথে</h3>
+      <p>মেহনত, ধৈর্য আর বিশ্বাস — এই তিনে গড়া হয়েছে মাহির জীবনের আসল গল্প।</p>
+    </div>
 
-<section id="games">
-  <h2>🎮 Game Zone</h2>
-  <button onclick="playGame()">Play Snake Game</button>
-  <div id="gameArea"></div>
+  </div>
 </section>
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahi's Zone</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <h1>🌟 Mahi's Zone 🌟</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#games">Games</a>
-      <a href="#fans">Fan Zone</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Home -->
-  <section id="home">
-    <h2>Welcome to Mahi's Dream Website 🚀</h2>
-    <p>A place for youth, fun, learning & creativity</p>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <h2>🙋 About Me</h2>
-    <p>Hi, I'm <b>Imran Hussain Mahi</b>, a youth entrepreneur, content creator, and web designer.  
-    My dream is to build amazing projects that inspire the new generation 💡</p>
-    <ul>
-      <li>⚡ Director of Chacha Bhatiya Team</li>
-      <li>⚽ Football Player (Sonali Atit FC & SOFC Sporting Club)</li>
-      <li>🎥 Content Creator & Entrepreneur</li>
-    </ul>
-  </section>
-
-  <!-- Games -->
-  <section id="games">
-    <h2>🎮 Game Zone</h2>
-    <p>Click to play a simple game!</p>
-    <button onclick="playGame()">Play Snake Game</button>
-    <div id="gameArea"></div>
-  </section>
-
-  <!-- Fan Zone -->
-  <section id="fans">
-    <h2>🌍 Fan Zone</h2>
-    <p>Leave your comments & messages 💬</p>
-    <textarea id="fanComment" placeholder="Write your comment..."></textarea><br>
-    <button onclick="addComment()">Submit</button>
-    <div id="commentsList"></div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>📞 Contact Me</h2>
-    <p>Follow me on social media:</p>
-    <a href="https://facebook.com" target="_blank">Facebook</a> |
-    <a href="https://youtube.com" target="_blank">YouTube</a> |
-    <a href="https://tiktok.com" target="_blank">TikTok</a>
-  </section>
-
-  
-  <script src="script.js"></script>
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Imran Hussain Mahi - Features 1-50</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('your-graffiti-background.jpg') no-repeat center center/cover;
-      color: white;
-    }
-    header {
-      background: rgba(0,0,0,0.7);
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background: rgba(0,0,0,0.8);
-    }
-    nav button {
-      margin: 5px;
-      padding: 10px 15px;
-      background: #ff6600;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      color: white;
-      font-weight: bold;
-    }
-    nav button:hover {
-      background: #ff3300;
-    }
-    section {
-      display: none;
-      padding: 20px;
-      min-height: 300px;
-      background: rgba(0,0,0,0.6);
-      margin: 10px;
-      border-radius: 10px;
-    }
-    section.active {
-      display: block;
-    }
-    .gallery img {
-      width: 150px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-    .shop-item {
-      background: #222;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 10px;
-      display: inline-block;
-    }
-    .shop-item img {
-      width: 120px;
-      border-radius: 5px;
-    }
-    .review {
-      background: #333;
-      padding: 10px;
-      margin: 10px;
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
-  <header>🔥 Imran Hussain Mahi Website - Features 🔥</header>
-  
-  <!-- Navigation -->
-  <nav>
-    <button onclick="showSection('game1')">Game 1</button>
-    <button onclick="showSection('game2')">Game 2</button>
-    <button onclick="showSection('gallery')">Gallery</button>
-    <button onclick="showSection('reviews')">Reviews</button>
-    <button onclick="showSection('chat')">Live Chat</button>
-    <button onclick="showSection('music')">Music Player</button>
-    <button onclick="showSection('video')">Video Player</button>
-    <button onclick="showSection('shop')">Shop</button>
-    <button onclick="showSection('profile')">Profile</button>
-    <button onclick="showSection('language')">Multi-Language</button>
-    <!-- Buttons up to Feature 50 -->
-    <button 
-  
-  <!-- Sections -->
-  <section id="game1" class="active">
-    <h2>🎮 Game 1</h2>
-    <iframe src="https://games.cdn.famobi.com/html5games/g/gold-miner/v060/?fg_domain=play.famobi.com" width="100%" height="400"></iframe>
-  </section>
-  
-  <section id="game2">
-    <h2>🎮 Game 2</h2>
-    <iframe src="https://games.cdn.famobi.com/html5games/f/fireboy-and-watergirl-forest-temple/v010/?fg_domain=play.famobi.com" width="100%" height="400"></iframe>
-  </section>
-  
-  <section id="gallery" class="gallery">
-    <h2>🖼️ Gallery</h2>
-    <img src="your-photo1.jpg" alt="Gallery 1">
-    <img src="your-photo2.jpg" alt="Gallery 2">
-    <img src="your-photo3.jpg" alt="Gallery 3">
-  </section>
-  
-  <section id="reviews">
-    <h2>⭐ Reviews</h2>
-    <div class="review">"Awesome website!" – User A</div>
-    <div class="review">"Loved the graphics!" – User B</div>
-    <div class="review">"Best features ever!" – User C</div>
-  </section>
-  
-  <section id="chat">
-    <h2>💬 Live Chat</h2>
-    <iframe src="https://www5.cbox.ws/box/?boxid=947582&boxtag=s56uik" width="100%" height="400"></iframe>
-  </section>
-  
-  <section id="music">
-    <h2>🎵 Music Player</h2>
-    <audio controls>
-      <source src="your-music.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-  
-  <section id="video">
-    <h2>📺 Video Player</h2>
-    <video controls width="100%">
-      <source src="your-video.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
-  </section>
-  
-  <section id="shop">
-    <h2>🛒 Shop</h2>
-    <div class="shop-item">
-      <img src="product1.jpg" alt="Product 1">
-      <p>Product 1 - $10</p>
-      <button>Buy Now</button>
-    </div>
-    <div class="shop-item">
-      <img src="product2.jpg" alt="Product 2">
-      <p>Product 2 - $20</p>
-      <button>Buy Now</button>
-    </div>
-  </section>
-  
-  <section id="profile">
-    <h2>👤 Profile</h2>
-    <p>Name: Imran Hussain Mahi</p>
-    <p>Occupation: Director | Online Entrepreneur</p>
-    <p>From: Sylhet, Bangladesh</p>
-  </section>
-  
-  <section id="language">
-    <h2>🌍 Multi-Language</h2>
-    <p>Select your language:</p>
-    <select>
-      <option>English</option>
-      <option>বাংলা</option>
-      <option>Português</option>
-      <option>Español</option>
-      <option>Français</option>
-    </select>
-  </section>
-  
-  <!-- Dummy Sections 11-50 -->
-  <section id="Mahi's zone"><h2>Feature 11 Content</h2>
-  <section id="Ai"><h2>Feature 12 Content</h2></section>
-  <section id="Course"><h2>Feature 13 Content</h2></section>
-  <section id="Travel guide"><h2>Feature 14 Content</h2></section>
-  <section id="imran hussain mahi"><h2>Feature 15 Content</h2></section>
-  <section id="Caption"><h2>Feature 16 Content</h2></section>
-  <section id="Mahi's word"><h2>Feature 17 Content</h2></section>
-  <section id="Dream website"><h2>Feature 18 Content</h2></section>
-  <section id="Work info"><h2>Feature 19 Content</h2></section>
-  <section id="Talent hunt"><h2>Feature 20 Content</h2></section>
-  
-  <script>
-    function showSection(id) {
-      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    }
-  </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahi's Zone</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      text-align: center;
-    }
-    h1 { margin: 20px 0; font-size: 2.5rem; color: #ffcc00; }
-
-    /* Feature menu */
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px 0;
-    }
-    .menu button {
-      width: 120px;
-      height: 60px;
-      background: #ff5722;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .menu button:hover {
-      background: #ff9800;
-      transform: scale(1.1);
-    }
-
-    /* Sections */
-    .section {
-      display: none;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 10px;
-      border: 2px solid #ffcc00;
-    }
-    .active { display: block; }
-  </style>
-</head>
-<body>
-
-  <h1>🔥 Welcome to Mahi's Zone 🔥</h1>
-
-  <!-- Feature Menu (50 Buttons) -->
-  <div class="menu">
-    <!-- Buttons auto generated -->
-    <script>
-      for (let i = 1; i <= 50; i++) {
-        document.write(`<button onclick="showSection('feature${i}')">Feature ${i}</button>`);
-      }
-    </script>
-  </div>
-
-  <!-- Sections (50 Content Areas) -->
-  <div id="sections">
-    <script>
-      for (let i = 1; i <= 50; i++) {
-        document.write(`<div id="feature${i}" class="section">⭐ এখানে Feature ${i} এর কনটেন্ট আসবে ⭐</div>`);
-      }
-    </script>
-  </div>
-
-  <script>
-    function showSection(id) {
-      let sections = document.querySelectorAll('.section');
-      sections.forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
-
-</body>
-</html>
-
-<footer>
-    <p>© 2025 Mahi's Zone | Designed with ❤️ by Mahi</p>
-  </footer>
-<section id="about" style="text-align:center; padding:50px; background:#f8f9fa;">
-  <h2>About Me</h2>
-  <img src="https://raw.githubusercontent.com/imranmahi529/imranmahi529.github.io/main/retouch_2025100514040064.jpg" 
-       alt="Imran Hussain Mahi" 
-       width="250" 
-       style="border-radius:50%; box-shadow:0 0 20px rgba(0,0,0,0.3); margin:20px;">
-  <p style="font-size:18px; max-width:600px; margin:auto;">
-    Hi! I'm <b>Imran Hussain Mahi</b> — a young entrepreneur, director, and content creator from Sylhet, Bangladesh.  
-    I love travelling, football, and creating new digital projects. 🌍🎬⚽
-  </p>
-</section>
-imran hussain mahi 🖤
