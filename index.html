@@ -1,151 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahi Life | আমার জীবন</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HalalPredict — App-style Web Prototype</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
-    body {
-      margin: 0;
-      font-family: 'Noto Sans Bengali', sans-serif;
-      background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-      color: #fff;
-      overflow-x: hidden;
+    :root{
+      --bg-1: #021b1a; /* deep teal */
+      --bg-2: #062e2d; /* darker */
+      --accent: #f6c24c; /* gold */
+      --accent-2: #00c08b; /* green glow */
+      --card: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));
+      --glass: rgba(255,255,255,0.03);
+      --radius: 20px;
+      --shadow: 0 10px 30px rgba(2,19,18,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
     }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(1200px 600px at 10% 20%, rgba(0,128,96,0.08), transparent 6%),
+                  radial-gradient(1000px 500px at 90% 80%, rgba(6,46,45,0.18), transparent 10%),
+                  linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      color:#e6f7f1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      display:flex; align-items:center; justify-content:center; padding:32px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="%23010b0b" stop-opacity="0.08"/><stop offset="1" stop-color="%23081a19" stop-opacity="0.02"/></linearGradient></defs><g opacity="0.06"><rect width="1200" height="800" fill="url(%23g)"/></g><g opacity="0.06" transform="translate(0,40)"><path d="M0 400 C150 280 300 320 450 250 C600 180 750 260 900 220 C1050 180 1200 280 1200 280 L1200 800 L0 800 Z" fill="%23001010" /></g><g fill="%23050f0e" opacity="0.04"><path d="M200 220 q80 -120 200 -40 q120 80 240 -20 q120 -100 300 0 v60 h-940 z"/></g><g transform="translate(40,40)" fill="%23ffffff" opacity="0.05"><path d="M220 560 L260 520 L300 560 L340 520 L380 560 L420 520 L460 560 L500 520 L540 560 L580 520 L620 560" /></g><g transform="translate(20,40)" opacity="0.06" fill="%23ffffff"><path d="M40 240 L120 200 L200 240 L280 200 L360 240 L440 200 L520 240"/></g><g opacity="0.09" transform="translate(40,20)"><path d="M980 70 a120 120 0 1 0 0.1 0" fill="%23f6c24c"/></g></svg>');
+      background-blend-mode: overlay, normal;
+    }/* phone frame */
+.app-frame{
+  width:380px; max-width:95vw; height:820px; border-radius:32px; padding:22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 20px 60px rgba(2,23,22,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  position:relative; overflow:hidden; backdrop-filter: blur(6px);
+}
+/* subtle glow lines */
+.app-frame:before{content:''; position:absolute; left:-30%; top:-20%; width:160%; height:60%; background:radial-gradient(closest-side, rgba(0,192,140,0.06), transparent); transform:rotate(-8deg); pointer-events:none}
 
-    /* animated 3D background */
-    .bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-      background: radial-gradient(circle at 30% 30%, #444 0%, #000 80%);
-      animation: moveBg 10s infinite alternate;
-    }
-    @keyframes moveBg {
-      0% { background-position: 0 0; }
-      100% { background-position: 200px 200px; }
-    }
+header{display:flex; align-items:center; justify-content:space-between; gap:12px}
+.logo{display:flex; align-items:center; gap:12px}
+.logo .crescent{
+  width:48px; height:48px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#d9a73b);
+  box-shadow: 0 6px 18px rgba(246,194,76,0.18), 0 2px 6px rgba(0,0,0,0.6);
+}
+.logo svg{width:28px; height:28px}
+.brand{font-weight:800; letter-spacing:0.6px; color:var(--accent); font-size:16px}
 
-    header {
-      text-align: center;
-      padding: 40px 20px 20px;
-      font-size: 2em;
-      font-weight: 700;
-      color: #00c6ff;
-      text-shadow: 0 0 15px #00c6ff;
-    }
+.user{display:flex; align-items:center; gap:10px}
+.avatar{width:44px; height:44px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08)); display:grid; place-items:center; box-shadow: var(--shadow)}
 
-    .life-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      display: grid;
-      gap: 25px;
-    }
+main{margin-top:18px}
+.grid{display:grid; grid-template-columns:1fr 120px; gap:14px}
 
-    .scene {
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.2);
-      backdrop-filter: blur(6px);
-      transform-style: preserve-3d;
-      transition: transform 0.5s;
-    }
+.card{
+  background: var(--card); border-radius: var(--radius); padding:18px; box-shadow: var(--shadow);
+  border:1px solid rgba(255,255,255,0.03);
+}
 
-    .scene:hover {
-      transform: rotateY(5deg) scale(1.02);
-    }
+.big-card{height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px}
+.trophy{width:86px; height:86px; background:linear-gradient(180deg,var(--accent), #d6a43b); border-radius:14px; display:grid; place-items:center; box-shadow: 0 8px 24px rgba(0,0,0,0.6);}
+.trophy svg{width:48px; height:48px; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));}
+.points{font-size:34px; font-weight:800; color:var(--accent);}
+.sub{font-size:12px; color:rgba(255,255,255,0.6)}
 
-    .scene h2 {
-      color: #00ffcc;
-      margin-bottom: 10px;
-    }
+.side-cards{display:flex; flex-direction:column; gap:12px}
+.side-btn{padding:14px; border-radius:14px; display:flex; align-items:center; gap:10px; justify-content:flex-start; cursor:pointer}
+.side-btn .icon{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06)); box-shadow: inset 0 1px 0 rgba(255,255,255,0.02)}
+.side-btn h4{margin:0; font-size:13px}
 
-    .scene p {
-      line-height: 1.8;
-      font-size: 1.1em;
-    }
+/* Live prediction card */
+.live{margin-top:16px; display:flex; gap:12px; flex-direction:column}
+.match-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.06)); padding:16px; border-radius:16px; display:flex; align-items:center; justify-content:space-between; gap:12px}
+.team{display:flex; align-items:center; gap:12px}
+.flag{
+  width:56px; height:40px; border-radius:8px; display:grid; place-items:center; font-weight:700; font-size:18px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06)); border:1px solid rgba(255,255,255,0.02)
+}
+.vs{font-weight:800; font-size:18px; color:rgba(255,255,255,0.9)}
+.predict-btn{padding:12px 20px; border-radius:14px; background: linear-gradient(180deg,var(--accent-2), #00a86b); color:white; font-weight:700; border:none; cursor:pointer; box-shadow: 0 10px 30px rgba(0,176,123,0.16);}
 
-    .voice-btn {
-      display: block;
-      margin: 30px auto;
-      background: #00c6ff;
-      border: none;
-      color: #fff;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 14px 28px;
-      border-radius: 50px;
-      cursor: pointer;
-      box-shadow: 0 0 20px #00c6ff;
-      transition: 0.3s;
-    }
+/* leaderboard list */
+.leaderboard{display:flex; flex-direction:column; gap:10px}
+.leader-item{display:flex; align-items:center; gap:12px; padding:8px; border-radius:12px; background:rgba(255,255,255,0.012); border:1px solid rgba(255,255,255,0.02)}
+.rank{width:36px; height:36px; border-radius:8px; display:grid; place-items:center; background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(0,0,0,0.06));}
+.name{font-weight:600}
+.score{margin-left:auto; font-weight:800;color:var(--accent)}
 
-    .voice-btn:hover {
-      background: #00ffcc;
-      box-shadow: 0 0 30px #00ffcc;
-    }
+footer{position:absolute; left:22px; right:22px; bottom:18px; display:flex; gap:12px; justify-content:space-between}
+.footer-btn{flex:1; padding:12px; border-radius:14px; display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(180deg, rgba(255,255,255,0.018), rgba(0,0,0,0.06)); border:1px solid rgba(255,255,255,0.03);}
+
+/* mosque arc at top */
+.mosque-arc{
+  position:absolute; left:0; right:0; top:-90px; height:220px; pointer-events:none; opacity:0.06; display:block; background: radial-gradient(closest-side, rgba(246,194,76,0.12), transparent 40%);
+  mask-image: radial-gradient(circle at 50% 100%, black 0%, transparent 65%);
+  -webkit-mask-image: radial-gradient(circle at 50% 100%, black 0%, transparent 65%);
+}
+
+/* responsive */
+@media (max-width:420px){
+  .app-frame{height:92vh; padding:18px}
+  .grid{grid-template-columns:1fr;}
+  .side-cards{flex-direction:row}
+}
+
   </style>
 </head>
 <body>
-  <div class="bg"></div>
-  <header>🎬 আমার জীবন — ইমরান হোসাইন মাহি</header>
+  <div class="app-frame" role="application" aria-label="HalalPredict app prototype">
+    <div class="mosque-arc" aria-hidden="true"></div>
+    <header>
+      <div class="logo">
+        <div class="crescent" aria-hidden="true">
+          <!-- crescent + star icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M15.5 3C13.1 3 11 4.6 10 7.1C12.3 6.6 14.7 7.6 16.3 9.6C18.6 12.3 18.1 16.2 15.4 18.5C12.8 20.8 8.9 20.3 6.6 17.6C4.3 14.9 4.8 11 7.5 8.7C9.6 6.9 12.4 6.6 15 7.6C15.2 6.2 15.5 4.6 15.5 3Z" fill="#ffffff" opacity="0.95"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand">HALAL PREDICT</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5)">Skill-based predictions — no betting</div>
+        </div>
+      </div><div class="user">
+    <div style="text-align:right; font-size:12px; color:rgba(255,255,255,0.65)">
+      <div style="font-weight:700">Imran M.</div>
+      <div style="font-size:11px">Level 7</div>
+    </div>
+    <div class="avatar" title="User avatar">
+      <!-- simple initial -->
+      <div style="font-weight:800;color:var(--accent)">IM</div>
+    </div>
+  </div>
+</header>
 
-  <div class="life-container">
-
-    <div class="scene">
-      <h2>শুরুটা</h2>
-      <p>আমার নাম ইমরান হোসাইন মাহি। আমি সুনামগঞ্জ জেলার ছেলে। ছোটবেলা থেকেই নতুন কিছু শেখা এবং তৈরি করার প্রতি আমার বিশেষ আগ্রহ ছিল।</p>
+<main>
+  <div class="grid">
+    <div class="card big-card">
+      <div class="trophy" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h10v5c0 1.1-.9 2-2 2H9c-1.1 0-2-.9-2-2V3z" fill="#fff" opacity="0.06"/><path d="M10 16v3h4v-3H10z" fill="#fff" opacity="0.04"/><path d="M12 5c-1.7 0-3 1.3-3 3v3h6V8c0-1.7-1.3-3-3-3z" fill="#fff"/></svg>
+      </div>
+      <div class="sub">Your Points</div>
+      <div class="points" id="points">2560</div>
     </div>
 
-    <div class="scene">
-      <h2>উদ্যোক্তা হওয়ার পথে</h2>
-      <p>বর্তমানে আমি অনলাইন উদ্যোক্তা এবং পরিচালক হিসেবে কাজ করছি। আমি বিশ্বাস করি শেখার শেষ নেই, তাই প্রতিটি মুহূর্তে কিছু না কিছু নতুন শিখতে ভালোবাসি।</p>
-    </div>
+    <div class="side-cards">
+      <div class="card side-btn" role="button">
+        <div class="icon">🏆</div>
+        <h4>Leaderboard</h4>
+      </div>
 
-    <div class="scene">
-      <h2>চাচা ভাতিজা টিম</h2>
-      <p>আমি একজন কনটেন্ট ক্রিয়েটর এবং আমার নিজস্ব ড্রামা টিম “চাচা ভাতিজা টিম” পরিচালনা করি। আমি সেখানে পরিচালক, ক্যামেরাম্যান এবং এডিটর হিসেবে কাজ করি। আমাদের উদ্দেশ্য মানুষকে বিনোদনের মাধ্যমে ইতিবাচক বার্তা দেওয়া।</p>
-    </div>
+      <div class="card side-btn" role="button">
+        <div class="icon">🎁</div>
+        <h4>Rewards</h4>
+      </div>
 
-    <div class="scene">
-      <h2>আমার ভালোবাসা ও আগ্রহ</h2>
-      <p>আমার পছন্দের রঙ কালো ও সাদা। আমি ভ্রমণ করতে ভালোবাসি এবং খেলাধুলা আমার জীবনের গুরুত্বপূর্ণ অংশ, যা আমাকে দলগতভাবে কাজ করতে শেখায়।</p>
-    </div>
-
-    <div class="scene">
-      <h2>অনুপ্রেরণা</h2>
-      <p>আমি আমার প্রয়াত বাবা সাজ্জাদ হোসাইন-এর দেখানো পথে চলতে চাই। তিনি ছিলেন সুনামগঞ্জ জেলা যুবদলের সহ-সভাপতি। তাঁর আদর্শ আমার জীবনের অনুপ্রেরণা।</p>
-    </div>
-
-    <div class="scene">
-      <h2>স্বপ্ন</h2>
-      <p>আমি চাই একদিন আমার নিজস্ব ব্র্যান্ড ও ব্যবসা গড়ে তুলতে — বিশেষ করে পুরুষদের পোশাক নিয়ে। পাশাপাশি আমার ওয়েবসাইট “Imran Hussain Mahi” যেন মানুষের কাছে অনুপ্রেরণার জায়গা হয়ে ওঠে।</p>
+      <div class="card side-btn" role="button">
+        <div class="icon">👤</div>
+        <h4>Profile</h4>
+      </div>
     </div>
   </div>
 
-  <button class="voice-btn" onclick="speakStory()">🔊 আমার গল্প শুনুন</button>
+  <section class="live">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+      <div style="font-weight:800">Live Prediction</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.5)">Next match starts in 2h 13m</div>
+    </div>
 
-  <script>
-    const storyText = `আমার নাম ইমরান হোসাইন মাহি। আমি সুনামগঞ্জ জেলার ছেলে। 
-    আমি ছোটবেলা থেকেই নতুন কিছু শেখা ও তৈরি করার প্রতি আগ্রহী। 
-    বর্তমানে আমি অনলাইন উদ্যোক্তা এবং পরিচালক হিসেবে কাজ করছি। 
-    আমি একজন কনটেন্ট ক্রিয়েটর এবং আমার ড্রামা টিম 'চাচা ভাতিজা টিম'-এর পরিচালক। 
-    আমার পছন্দের রঙ কালো ও সাদা। আমি ভ্রমণ ভালোবাসি এবং খেলাধুলা আমার জীবনের অংশ। 
-    আমার প্রয়াত বাবা সাজ্জাদ হোসাইন-এর আদর্শই আমার অনুপ্রেরণা। 
-    ভবিষ্যতে আমি চাই আমার নিজস্ব ব্র্যান্ড ও ব্যবসা গড়ে তুলতে, 
-    এবং আমার ওয়েবসাইট Imran Hussain Mahi হোক মানুষের অনুপ্রেরণার প্রতীক।`;
+    <div class="match-card">
+      <div class="team">
+        <div class="flag">🇧🇩</div>
+        <div>
+          <div style="font-weight:700">Bangladesh</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6)">Top form: 4W - 1L</div>
+        </div>
+      </div>
 
-    function speakStory() {
-      const utterance = new SpeechSynthesisUtterance(storyText);
-      utterance.lang = "bn-BD";
-      utterance.rate = 1;
-      utterance.pitch = 1;
-      speechSynthesis.speak(utterance);
+      <div style="text-align:center">
+        <div class="vs">VS</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.45)">T20 | Gulistan Cup</div>
+      </div>
+
+      <div class="team" style="justify-content:flex-end">
+        <div style="text-align:right">
+          <div style="font-weight:700">Pakistan</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6)">Top form: 3W - 2L</div>
+        </div>
+        <div class="flag">🇵🇰</div>
+      </div>
+
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:10px">
+      <button class="predict-btn" onclick="openPredict()">PREDICT</button>
+    </div>
+
+  </section>
+
+  <div style="margin-top:18px" class="card">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="font-weight:800">Leaderboard</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.5)">This month</div>
+    </div>
+
+    <div class="leaderboard" style="margin-top:12px">
+      <div class="leader-item"><div class="rank">1</div><div class="name">Rafi</div><div class="score">3200</div></div>
+      <div class="leader-item"><div class="rank">2</div><div class="name">Sami</div><div class="score">2980</div></div>
+      <div class="leader-item"><div class="rank">3</div><div class="name">Ayesha</div><div class="score">2760</div></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-btn">🏠 Home</div>
+  <div class="footer-btn">🔔 Alerts</div>
+  <div class="footer-btn">⚙️ Settings</div>
+</footer>
+
+  </div>  <script>
+    function openPredict(){
+      // simple modal simulation — replace with real flow later
+      const current = document.getElementById('points');
+      const add = Math.floor(Math.random()*120)+20;
+      current.innerText = Number(current.innerText) + add;
+      alert('Prediction recorded! You earned +' + add + ' points (skill-based).');
     }
-  </script>
-</body>
+  </script></body>
 </html>
