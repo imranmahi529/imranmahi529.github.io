@@ -3,32 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sonali Otit — Home</title>
+  <title>সোনালী অতীত ক্লাব — হোম</title>
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <meta name="description" content="Sonali Otit Football & Rotaract Club — Unity · Sports · Humanity. Football & Cricket 3D-style homepage." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root{
-      --bg-1: #031526;
-      --bg-2: #071c3a;
-      --accent: #F4C430; /* golden */
-      --muted: #dbe9ff;
-      --card: rgba(255,255,255,0.04);
-      --glass: rgba(255,255,255,0.03);
-      --radius: 16px;
-      --maxw: 1180px;
+      --bg1:#041527;
+      --bg2:#07233e;
+      --glass: rgba(255,255,255,0.04);
+      --card:#0d2740;
+      --accent:#F4C430;
+      --accent-2:#ff6b21;
+      --muted:#dceefc;
+      --radius:16px;
+      --maxw:1200px;
       --ease: cubic-bezier(.2,.9,.3,1);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background: linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 100%);
+      font-family: "Noto Sans Bengali", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
       color:var(--muted);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
@@ -37,443 +36,298 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
-    /* NAV */
-    header{position:sticky;top:0;z-index:90;background:linear-gradient(180deg, rgba(3,7,16,0.6), rgba(3,7,16,0.3));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.02)}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .logo{
-      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffd76b);
-      display:flex;align-items:center;justify-content:center;color:#081229;font-weight:800;font-size:20px;box-shadow: 0 8px 30px rgba(244,196,48,0.12);
+    /* HEADER */
+    header{
+      position:sticky;top:0;z-index:90;background:linear-gradient(180deg, rgba(3,7,16,0.6), rgba(3,7,16,0.3));
+      backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);
     }
-    .brand h1{font-size:18px;margin:0;color:var(--muted);font-weight:700}
-    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
-    nav a{color:var(--muted);font-weight:600;padding:8px 10px;border-radius:10px;transition:all .18s var(--ease)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo-placeholder{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffd76b);
+      display:flex;align-items:center;justify-content:center;color:#041527;font-weight:800;font-size:18px;box-shadow:0 12px 30px rgba(244,196,48,0.12);
+    }
+    .site-title{line-height:1}
+    .site-title h1{margin:0;font-size:16px;font-weight:800;color:var(--muted)}
+    .site-title p{margin:0;font-size:12px;color:rgba(255,255,255,0.7)}
+
+    nav ul{display:flex;gap:14px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{padding:8px 10px;border-radius:10px;font-weight:600;color:var(--muted);transition:all .18s var(--ease)}
     nav a:hover{background:rgba(255,255,255,0.02);color:var(--accent)}
-    .cta{background:var(--accent);color:#081229;padding:10px 14px;border-radius:12px;font-weight:800;box-shadow: 0 10px 30px rgba(244,196,48,0.12);}
+    .join-btn{background:var(--accent);color:#041527;padding:8px 12px;border-radius:12px;font-weight:800}
 
     /* HERO */
-    .hero{padding:72px 0 40px;position:relative;min-height:72vh;display:flex;align-items:center}
-    .hero-grid{display:grid;grid-template-columns:1fr 520px;gap:32px;align-items:center}
-    .hero-left{padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:20px;box-shadow: 0 18px 60px rgba(2,8,24,0.6)}
-    .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700;color:var(--accent);font-size:13px}
-    h2{font-size:44px;margin:16px 0 10px;line-height:1;color:#fff}
-    p.lead{color:#dbe9ff;opacity:0.95;margin:0 0 18px}
-    .hero-actions{display:flex;gap:12px;align-items:center}
-    .btn-primary{background:var(--accent);color:#081229;padding:14px 20px;border-radius:12px;font-weight:800;box-shadow:0 18px 50px rgba(244,196,48,0.12)}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 18px;border-radius:12px;color:var(--muted)}
-
-    /* 3D panel (right) */
-    .hero-3d{
-      position:relative;height:480px;border-radius:18px;overflow:visible;
-      background:
-        radial-gradient(600px 220px at 15% 20%, rgba(244,196,48,0.06), transparent 6%),
-        linear-gradient(180deg,#052745,#0c2340);
-      box-shadow: 0 30px 90px rgba(1,6,22,0.7);
-      display:flex;align-items:center;justify-content:center;transform-style:preserve-3d;
+    .hero{padding:44px 0 26px}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+    .big-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:20px;padding:22px;box-shadow:0 18px 60px rgba(2,8,24,0.6);
+      transform-style:preserve-3d;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.03)
     }
-
-    /* Floating 3D shapes: football + cricket ball + trophy + stadium plate */
-    .float-wrap{position:relative;width:420px;height:420px;display:block;transform-style:preserve-3d;}
-    .shape{
-      position:absolute;left:50%;top:50%;transform-style:preserve-3d;transform:translate(-50%,-50%);
-      will-change:transform;transition:transform 400ms var(--ease);
+    .big-card .head{display:flex;align-items:center;gap:14px}
+    .big-card .head .icon{
+      width:70px;height:70px;border-radius:14px;display:grid;place-items:center;font-size:30px;background:linear-gradient(135deg,rgba(255,255,255,0.06),transparent);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
     }
-    /* football */
-    .football{
-      width:120px;height:120px;border-radius:50%;
-      background:
-        radial-gradient(circle at 35% 25%, rgba(255,255,255,0.15), transparent 10%),
-        conic-gradient(from 0deg, #fff 0 60deg, #0b2545 60deg 120deg, #fff 120deg 180deg, #0b2545 180deg 240deg, #fff 240deg 300deg, #0b2545 300deg 360deg);
-      box-shadow: 0 18px 40px rgba(1,6,22,0.6), inset 0 -10px 18px rgba(0,0,0,0.25);
-      transform:translate3d(-120px,40px,90px) rotateY(-18deg);
-      animation: floatY 6s ease-in-out infinite;
+    .big-card h2{margin:6px 0 0;font-size:22px}
+    .big-card p{margin:10px 0 14px;opacity:0.95}
+
+    /* 3D-ish shapes decorations */
+    .shape-deco{
+      position:absolute;right:-40px;top:-40px;width:240px;height:240px;border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(244,196,48,0.08), transparent 20%), linear-gradient(135deg, rgba(244,196,48,0.02), transparent 40%);
+      filter: blur(22px);transform:translateZ(0);
     }
+    .shape-deco.left{left:-40px;right:auto;background: radial-gradient(circle at 30% 30%, rgba(255,107,33,0.06), transparent 20%), linear-gradient(135deg, rgba(255,107,33,0.02), transparent 40%)}
 
-    /* cricket ball */
-    .cricket{
-      width:92px;height:92px;border-radius:50%;
-      background: radial-gradient(circle at 30% 22%, rgba(255,255,255,0.08), transparent 8%), linear-gradient(180deg,#b80b0b,#8b0000);
-      box-shadow: 0 14px 36px rgba(0,0,0,0.6), inset 0 -6px 12px rgba(255,255,255,0.06);
-      transform:translate3d(120px,-10px,60px) rotateZ(8deg);
-      animation: floatY 5.3s ease-in-out infinite;
+    /* Football theme */
+    .football-card .stadium{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%) rotateX(70deg);width:420px;height:120px;border-radius:80px;background:linear-gradient(180deg,#052a46,#031426);box-shadow:0 40px 90px rgba(2,8,24,0.7)}
+    .football-ball{
+      width:110px;height:110px;border-radius:50%;background:conic-gradient(from 0deg,#fff 0 60deg,#052a46 60deg 120deg,#fff 120deg 180deg,#052a46 180deg 240deg,#fff 240deg 300deg,#052a46 300deg 360deg);
+      position:relative;left:42px;top:18px;box-shadow:0 16px 36px rgba(0,0,0,0.6), inset 0 -8px 16px rgba(255,255,255,0.05);
+      transform:translateZ(40px);animation:ball-bounce 3.6s ease-in-out infinite;
     }
+    @keyframes ball-bounce{0%{transform:translateY(0) translateZ(40px)}50%{transform:translateY(-18px) translateZ(70px)}100%{transform:translateY(0) translateZ(40px)}}
 
-    /* trophy */
-    .trophy{
-      width:130px;height:150px;transform:translate3d(0,40px,130px);
-      filter:drop-shadow(0 20px 40px rgba(244,196,48,0.12));
-      animation: spinSlow 20s linear infinite;
-      /* simple SVG will be inserted inline in HTML */
+    /* Cricket theme */
+    .cricket-card .pitch{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%) rotateX(70deg);width:420px;height:120px;border-radius:80px;background:linear-gradient(180deg,#2b3b12,#13230a);box-shadow:0 40px 90px rgba(2,8,24,0.7)}
+    .cricket-ball{
+      width:84px;height:84px;border-radius:50%;background:linear-gradient(180deg,#b70d0d,#8b0000);position:relative;left:120px;top:18px;box-shadow:0 14px 30px rgba(0,0,0,0.6);animation:cric-float 4s ease-in-out infinite;
+      border-left:3px solid rgba(255,255,255,0.06);border-right:3px solid rgba(255,255,255,0.06)
     }
-
-    /* stadium base (plate) */
-    .stadium{
-      width:380px;height:140px;border-radius:80px;background:linear-gradient(180deg,#07283f,#041623);
-      transform:translate3d(0,120px,0) rotateX(80deg) scale(1.02);
-      box-shadow: 0 60px 120px rgba(1,6,22,0.7);
-      overflow:hidden;
+    .bat{
+      width:18px;height:80px;background:linear-gradient(180deg,#f2c07a,#d99d3b);position:absolute;left:180px;top:0;transform:rotate(24deg);border-radius:6px;box-shadow:0 10px 26px rgba(0,0,0,0.5)
     }
+    @keyframes cric-float{0%{transform:translateY(0) translateZ(40px)}50%{transform:translateY(-12px) translateZ(60px)}100%{transform:translateY(0) translateZ(40px)}}
 
-    /* subtle movement */
-    @keyframes floatY{
-      0%{transform: translate3d(var(--tx,0),var(--ty,0),var(--tz,60px)) rotateZ(0deg)}
-      50%{transform: translate3d(var(--tx,0),calc(var(--ty,0) - 18px),var(--tz,80px)) rotateZ(18deg)}
-      100%{transform: translate3d(var(--tx,0),var(--ty,0),var(--tz,60px)) rotateZ(0deg)}
+    /* card grid for other sections */
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;padding:18px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.5);transition:transform .28s var(--ease), box-shadow .28s var(--ease);
+      transform-style:preserve-3d;
     }
-    @keyframes spinSlow{from{transform:translate3d(0,40px,130px) rotateY(0)}to{transform:translate3d(0,40px,130px) rotateY(360deg)}}
+    .card:hover{transform:translateY(-12px) rotateX(2deg) scale(1.02);box-shadow:0 30px 80px rgba(2,8,24,0.7)}
+    .card h4{margin:6px 0 8px}
+    .card p{opacity:0.9;margin:0 0 12px}
+    .card .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:var(--accent);color:#041527;font-weight:800}
 
-    /* sections */
-    section{padding:72px 0}
-    .section-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
-    .section-head h3{margin:0;font-size:22px;color:#e9f4ff}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow: 0 10px 30px rgba(0,0,0,0.5);}
-
-    /* events */
-    .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .event .date{background:var(--accent);color:#081229;padding:8px 12px;border-radius:10px;font-weight:800;display:inline-block;margin-bottom:10px}
-
-    /* gallery */
-    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.5);transition:transform .25s ease}
-    .gallery-grid img:hover{transform:scale(1.04)}
-
-    /* Sponsors strip */
-    .sponsor-strip{display:flex;gap:18px;align-items:center;overflow:hidden;padding:10px}
-    .sponsor{min-width:140px;height:64px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(0,0,0,0.5)}
-
-    /* Join form */
-    .join-card{display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,#082a4a,#07213a);padding:22px;border-radius:16px}
-    .join-card form{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .join-card input, .join-card textarea{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)}
-
-    /* footer */
-    footer{padding:26px 0;border-top:1px solid rgba(255,255,255,0.03);color:rgba(255,255,255,0.7);margin-top:22px;text-align:center}
+    /* small icon */
+    .card .cicon{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,0.03);font-size:20px;margin-bottom:10px}
 
     /* responsive */
-    @media(max-width:1100px){
-      .hero-grid{grid-template-columns:1fr 1fr}
-      .gallery-grid{grid-template-columns:repeat(3,1fr)}
-      .events-grid{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:1000px){
+      .hero-grid{grid-template-columns:1fr;gap:18px}
+      .cards-grid{grid-template-columns:repeat(2,1fr)}
     }
-    @media(max-width:760px){
+    @media(max-width:620px){
       nav ul{display:none}
-      .hero-grid{grid-template-columns:1fr}
-      .hero-3d{height:420px}
-      .gallery-grid{grid-template-columns:repeat(2,1fr)}
-      .events-grid{grid-template-columns:1fr}
-    }
-    @media(max-width:420px){
-      .football{display:none}
-      .cricket{display:none}
+      .cards-grid{grid-template-columns:1fr}
+      .big-card{padding:16px}
     }
 
-    /* small hover trick for shapes: lift on hero hover */
-    .hero-3d:hover .shape{transform:translate3d(-50%,-50%,140px) rotateY(6deg) scale(1.02)}
+    /* footer */
+    footer{padding:30px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:24px;color:rgba(255,255,255,0.7)}
+    .flex{display:flex;gap:12px;align-items:center}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <div class="brand">
-        <div class="logo"><i class="fas fa-futbol"></i></div>
-        <div>
-          <h1>Sonali Otit</h1>
-          <div style="font-size:12px;color:rgba(255,255,255,0.65)">Football & Rotaract Club</div>
+        <!-- LOGO PLACEHOLDER: replace with <img src="logo.png"> when ready -->
+        <div class="logo-placeholder" aria-hidden="true">SO</div>
+        <div class="site-title">
+          <h1>সোনালী অতীত ফুটবল ক্লাব</h1>
+          <p>এবং রোটারেক্ট ক্রিকেট ক্লাব</p>
         </div>
       </div>
 
-      <nav aria-label="primary-navigation">
+      <nav aria-label="main-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="join.html">Join</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="sponsors.html">Sponsors</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">হোম</a></li>
+          <li><a href="about.html">পরিচিতি</a></li>
+          <li><a href="team.html">টিম</a></li>
+          <li><a href="events.html">ইভেন্ট</a></li>
+          <li><a href="gallery.html">গ্যালারি</a></li>
+          <li><a href="news.html">নিউজ</a></li>
+          <li><a href="join.html">সদস্যতা</a></li>
+          <li><a href="blog.html">ব্লগ</a></li>
+          <li><a href="sponsors.html">স্পনসর</a></li>
+          <li><a href="contact.html">যোগাযোগ</a></li>
         </ul>
       </nav>
 
-      <a class="cta" href="join.html">JOIN</a>
+      <a class="join-btn" href="join.html">যোগ দিন</a>
     </div>
   </header>
 
-  <main>
-    <!-- HERO / HOME -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <!-- LEFT: text -->
-        <div class="hero-left">
-          <span class="eyebrow">Sonali Otit</span>
-          <h2>UNITY · SPORTS · HUMANITY</h2>
-          <p class="lead">সোনালী অতীত ক্লাব — ফুটবল ও রোটারেক্টের সমন্বয়ে গড়া একটি জীবন্ত কমিউনিটি। আমরা তরুণদের নেতৃত্ব, স্বাস্থ্য ও ক্রীড়ায় দক্ষতা গড়ে তুলতে কাজ করি।</p>
-
-          <div class="hero-actions">
-            <a class="btn-primary" href="join.html">Join Now</a>
-            <a class="btn-ghost" href="events.html">Upcoming Events</a>
-          </div>
-
-          <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
-            <div style="padding:10px 14px;border-radius:12px;background:rgba(255,255,255,0.02);display:flex;align-items:center;gap:10px">
-              <i class="fas fa-award" style="color:var(--accent)"></i>
-              <div><strong style="color:var(--accent)">20+</strong><div style="font-size:13px;color:rgba(255,255,255,0.75)">Achievements</div></div>
-            </div>
-            <div style="padding:10px 14px;border-radius:12px;background:rgba(255,255,255,0.02);display:flex;align-items:center;gap:10px">
-              <i class="fas fa-users" style="color:var(--accent)"></i>
-              <div><strong style="color:var(--accent)">150+</strong><div style="font-size:13px;color:rgba(255,255,255,0.75)">Members</div></div>
-            </div>
+  <main class="container" style="padding-top:18px">
+    <!-- HERO: two big theme cards side-by-side -->
+    <section class="hero-grid" aria-label="themes">
+      <!-- FOOTBALL -->
+      <article class="big-card football-card" role="article" aria-labelledby="f-title">
+        <div class="shape-deco" aria-hidden="true"></div>
+        <div class="head">
+          <div class="icon" style="background:linear-gradient(135deg, rgba(255,255,255,0.06), transparent)"><i class="fas fa-futbol" style="color:var(--accent);font-size:28px"></i></div>
+          <div>
+            <h2 id="f-title">সোনালী অতীত ফুটবল ক্লাব</h2>
+            <div style="font-size:13px;color:rgba(255,255,255,0.8)">ফুটবল থিম • প্রশিক্ষণ • টুর্নামেন্ট</div>
           </div>
         </div>
 
-        <!-- RIGHT: 3D / graphics -->
-        <div class="hero-3d" aria-hidden="true">
-          <div class="float-wrap">
-            <!-- stadium plate (base) -->
-            <div class="stadium" style="position:absolute;left:50%;top:70%;transform:translate(-50%,-20%) rotateX(78deg) scale(1);"></div>
+        <p>স্থানীয় লেভেলে টিম গঠন, ট্রেনিং সেশন ও বার্ষিক টুর্নামেন্ট আয়োজন করে ক্লাব। খেলোয়াড়দের দক্ষতা ও দলগত মনোভাব গড়ে তোলা আমাদের মূল লক্ষ্য।</p>
 
-            <!-- football -->
-            <div class="shape football" style="--tx:-120px;--ty:40px;--tz:90px;" title="football"></div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="btn" href="football.html" aria-label="ফুটবল পেইজ দেখুন">বিস্তারিত দেখুন</a>
+          <div style="margin-left:auto;color:rgba(255,255,255,0.75);font-weight:700">মোট সদস্য: ১৫০+</div>
+        </div>
 
-            <!-- cricket ball -->
-            <div class="shape cricket" style="--tx:120px;--ty:-10px;--tz:60px;" title="cricket"></div>
+        <!-- stadium & ball -->
+        <div class="stadium" aria-hidden="true"></div>
+        <div class="football-ball" aria-hidden="true"></div>
+      </article>
 
-            <!-- trophy SVG -->
-            <div class="shape trophy" style="left:50%;top:44%;transform:translate(-50%,-50%)">
-              <!-- small trophy SVG -->
-              <svg width="130" height="150" viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M38 18c0-6 9-14 26-14s26 8 26 14v18h8c0 10-6 22-23 29v10H45v-10C28 58 22 46 22 36h16V18z" fill="#ffd76b"/>
-                <rect x="46" y="94" width="38" height="10" rx="4" fill="#d7ae24"/>
-                <rect x="36" y="106" width="58" height="12" rx="6" fill="#0b2545"/>
-                <text x="65" y="116" font-size="12" text-anchor="middle" fill="#ffd76b" font-weight="700">SON</text>
-              </svg>
-            </div>
-
-            <!-- small decorative lights -->
-            <div style="position:absolute;left:10%;top:8%;width:12px;height:12px;border-radius:50%;background:rgba(244,196,48,0.18);filter:blur(6px)"></div>
-            <div style="position:absolute;right:10%;top:18%;width:8px;height:8px;border-radius:50%;background:rgba(244,196,48,0.08);filter:blur(4px)"></div>
+      <!-- CRICKET -->
+      <article class="big-card cricket-card" role="article" aria-labelledby="c-title">
+        <div class="shape-deco left" aria-hidden="true"></div>
+        <div class="head">
+          <div class="icon" style="background:linear-gradient(135deg, rgba(255,255,255,0.06), transparent)"><i class="fas fa-cricket-bat-ball" style="color:var(--accent-2);font-size:26px"></i></div>
+          <div>
+            <h2 id="c-title">রোটারেক্ট ক্রিকেট ক্লাব</h2>
+            <div style="font-size:13px;color:rgba(255,255,255,0.8)">ক্রিকেট থিম • কমিউনিটি মেসেজ • ম্যাচ</div>
           </div>
         </div>
+
+        <p>রোটারেক্টের মাধ্যমে ক্রিকেট কার্যক্রম ও মানবসেবা একসাথে — ক্রিকেট ট্রেনিং, কৌশল চর্চা ও বন্ধুত্বপূর্ণ ম্যাচ আয়োজিত হয় নিয়মিত।</p>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="btn" href="cricket.html" aria-label="ক্রিকেট পেইজ দেখুন">বিস্তারিত দেখুন</a>
+          <div style="margin-left:auto;color:rgba(255,255,255,0.75);font-weight:700">টিম মেম্বার: ৮০+</div>
+        </div>
+
+        <!-- pitch & ball & bat -->
+        <div class="pitch" aria-hidden="true"></div>
+        <div class="cricket-ball" aria-hidden="true"></div>
+        <div class="bat" aria-hidden="true"></div>
+      </article>
+    </section>
+
+    <!-- CARDS GRID: sections  (About, Team, Events, Gallery, News, Join, Blog, Sponsors, Contact) -->
+    <section style="margin-top:28px">
+      <div class="section-head" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <h3 style="margin:0">সেকশন গুলো</h3>
+        <div style="color:rgba(255,255,255,0.6);font-size:13px">প্রতিটি কার্ডে ক্লিক করলে আলাদা পেইজে যাবে</div>
+      </div>
+
+      <div class="cards-grid" role="list">
+        <a class="card" href="about.html" role="listitem" aria-label="পরিচিতি">
+          <div class="cicon"><i class="fas fa-info-circle" style="color:var(--accent)"></i></div>
+          <h4>পরিচিতি (About)</h4>
+          <p>ক্লাবের ইতিহাস, মিশন ও উদ্দেশ্য।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="team.html" role="listitem" aria-label="টিম">
+          <div class="cicon"><i class="fas fa-users" style="color:var(--accent)"></i></div>
+          <h4>টিম (Team)</h4>
+          <p>কমিটি ও কোচিং স্টাফের তালিকা।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="events.html" role="listitem" aria-label="ইভেন্ট">
+          <div class="cicon"><i class="fas fa-calendar-check" style="color:var(--accent)"></i></div>
+          <h4>ইভেন্ট (Events)</h4>
+          <p>আগামী ও শেষ ইভেন্টের তালিকা ও রেজিস্ট্রেশন।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="gallery.html" role="listitem" aria-label="গ্যালারি">
+          <div class="cicon"><i class="fas fa-photo-video" style="color:var(--accent)"></i></div>
+          <h4>গ্যালারি (Gallery)</h4>
+          <p>ম্যাচ ও কার্যক্রমের ছবি-ভিডিও।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="news.html" role="listitem" aria-label="নিউজ">
+          <div class="cicon"><i class="fas fa-newspaper" style="color:var(--accent)"></i></div>
+          <h4>নিউজ (News)</h4>
+          <p>সর্বশেষ সংবাদ ও ঘোষণাসমূহ।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="join.html" role="listitem" aria-label="সদস্যতা">
+          <div class="cicon"><i class="fas fa-user-plus" style="color:var(--accent)"></i></div>
+          <h4>সদস্যতা (Join)</h4>
+          <p>অনলাইন রেজিস্ট্রেশন ফর্ম।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="blog.html" role="listitem" aria-label="ব্লগ">
+          <div class="cicon"><i class="fas fa-blog" style="color:var(--accent)"></i></div>
+          <h4>ব্লগ (Blog)</h4>
+          <p>খেলা ও সমাজসেবা নিয়ে আর্টিকেল।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="sponsors.html" role="listitem" aria-label="স্পনসর">
+          <div class="cicon"><i class="fas fa-hand-holding-heart" style="color:var(--accent)"></i></div>
+          <h4>স্পনসর (Sponsors)</h4>
+          <p>পাঠক/ব্যবসায়িক সহযোগী তথ্য।</p>
+          <span class="btn">খুলুন</span>
+        </a>
+
+        <a class="card" href="contact.html" role="listitem" aria-label="যোগাযোগ">
+          <div class="cicon"><i class="fas fa-phone" style="color:var(--accent)"></i></div>
+          <h4>যোগাযোগ (Contact)</h4>
+          <p>ঠিকানা, ফোন ও যোগাযোগ ফর্ম।</p>
+          <span class="btn">খুলুন</span>
+        </a>
       </div>
     </section>
 
-    <!-- ABOUT PREVIEW -->
-    <section id="about" class="container">
-      <div class="section-head">
-        <h3>About Us</h3>
-        <div style="color:rgba(255,255,255,0.6)">Learn more → <a href="about.html" style="color:var(--accent);margin-left:8px">About page</a></div>
-      </div>
-
-      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-        <div style="flex:1;min-width:280px">
-          <div class="card">
-            <h4 style="margin-top:0;color:#fff">সোনালী অতীত ক্লাব কী?</h4>
-            <p style="opacity:0.9">ফুটবল ও রোটারেক্ট একত্রিত করে আমরা তরুণদের ক্রীড়া দক্ষতা বাড়ানো, সমাজসেবা ও নেতৃত্ব গঠন করি। ক্লাবটি স্থানীয় টুর্নামেন্ট ও কমিউনিটি প্রজেক্টে সক্রিয়ভাবে অংশ নেয়।</p>
+    <!-- FOOTER -->
+    <footer>
+      <div class="flex" style="justify-content:space-between;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="logo-placeholder" style="width:48px;height:48px;font-size:14px">SO</div>
+          <div>
+            <div style="font-weight:800">সোনালী অতীত ফুটবল ক্লাব</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.65)">Rotaract Cricket Club • Community & Sports</div>
           </div>
         </div>
 
-        <div style="flex:1;min-width:280px">
-          <div class="card">
-            <h4 style="margin-top:0;color:#fff">Dream Zone (3D)</h4>
-            <p style="opacity:0.9">ভবিষ্যৎ পরিকল্পনা — ট্রেনিং একাডেমি, ইউনিফর্ম প্রজেক্ট এবং ইউথ এমপাওয়ারমেন্ট। বিস্তারিত জানতে <a href="about.html" style="color:var(--accent)">About</a> পেজ দেখুন।</p>
-          </div>
-        </div>
-
-        <div style="flex:0 0 260px">
-          <div class="card" style="text-align:center">
-            <div style="font-size:32px;color:var(--accent);font-weight:800">150+</div>
-            <div style="opacity:0.8">Active Members</div>
+        <div style="text-align:right">
+          <div style="margin-bottom:6px">© <span id="yr"></span> সোনালী অতীত ক্লাব</div>
+          <div style="display:flex;gap:10px;justify-content:flex-end">
+            <a href="#"><i class="fab fa-facebook" style="color:var(--accent)"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:var(--accent)"></i></a>
+            <a href="#"><i class="fab fa-youtube" style="color:var(--accent)"></i></a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- EVENTS PREVIEW -->
-    <section style="background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
-      <div class="container">
-        <div class="section-head">
-          <h3>Events & Activities</h3>
-          <div style="color:rgba(255,255,255,0.6)">See all events → <a href="events.html" style="color:var(--accent)">Events</a></div>
-        </div>
-
-        <div class="events-grid">
-          <div class="card event">
-            <div class="date">12 JUN</div>
-            <h4>Annual Football Tournament</h4>
-            <p style="opacity:0.9">মাঠে থাকুন — স্থানীয় ক্লাবগুলোর মধ্যে বার্ষিক টুর্নামেন্ট।</p>
-          </div>
-          <div class="card event">
-            <div class="date">25 JUL</div>
-            <h4>Rotaract Blood Drive</h4>
-            <p style="opacity:0.9">রক্তদান শিবির — সকলের অংশগ্রহণ কাম্য।</p>
-          </div>
-          <div class="card event">
-            <div class="date">05 AUG</div>
-            <h4>Youth Training Camp</h4>
-            <p style="opacity:0.9">ফ্রি ট্রেনিং — নতুন খেলোয়াড়দের জন্য সমস্যা সমাধান ও কৌশল।</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY PREVIEW -->
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h3>Gallery</h3>
-          <div style="color:rgba(255,255,255,0.6)">Memories → <a href="gallery.html" style="color:var(--accent)">Full gallery</a></div>
-        </div>
-
-        <div class="gallery-grid">
-          <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?q=80&w=800&auto=format&fit=crop" alt="match">
-          <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=800&auto=format&fit=crop" alt="team">
-          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=800&auto=format&fit=crop" alt="crowd">
-          <img src="https://images.unsplash.com/photo-1520975914592-1f3a7b6b8a9d?q=80&w=800&auto=format&fit=crop" alt="trophy">
-        </div>
-      </div>
-    </section>
-
-    <!-- NEWS PREVIEW -->
-    <section style="background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
-      <div class="container">
-        <div class="section-head">
-          <h3>News & Notice</h3>
-          <div style="color:rgba(255,255,255,0.6)">Updates → <a href="news.html" style="color:var(--accent)">All news</a></div>
-        </div>
-
-        <div class="grid-3">
-          <div class="card">
-            <h4>Training sessions reopen</h4>
-            <p style="opacity:0.9">রোজকার বিকালেই ট্রেনিং শুরু, সবাইকে আহ্বান করা হচ্ছে।</p>
-          </div>
-          <div class="card">
-            <h4>Successful blood drive</h4>
-            <p style="opacity:0.9">রক্তদান শিবিরে ৫০ জন ডোনার অংশগ্রহণ করেছেন।</p>
-          </div>
-          <div class="card">
-            <h4>Field upgrade complete</h4>
-            <p style="opacity:0.9">নতুন লাইটিং ও গ্রাস ইনস্টল করা হয়েছে।</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- JOIN CTA -->
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h3>Join Us</h3>
-          <div style="color:rgba(255,255,255,0.6)">Become a member → <a href="join.html" style="color:var(--accent)">Sign up</a></div>
-        </div>
-
-        <div class="card join-card">
-          <div style="flex:1">
-            <h4 style="margin:0;color:#fff">Want to join Sonali Otit?</h4>
-            <p style="opacity:0.9">নাম, ফোন ও ইচ্ছার ক্ষেত্র লিখে আমাদের সাথে যোগ দিন — আমরা যোগাযোগ করবো।</p>
-          </div>
-
-          <form action="join.html" method="get" style="display:flex;gap:8px;align-items:center">
-            <input name="name" placeholder="নাম" aria-label="name" />
-            <input name="phone" placeholder="ফোন" aria-label="phone" />
-            <button type="submit" class="btn-primary">Sign up</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- SPONSORS -->
-    <section style="background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
-      <div class="container">
-        <div class="section-head">
-          <h3>Sponsors</h3>
-          <div style="color:rgba(255,255,255,0.6)">Partners → <a href="sponsors.html" style="color:var(--accent)">See partners</a></div>
-        </div>
-
-        <div class="sponsor-strip">
-          <div class="sponsor"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Football_icon.svg" alt="s1" style="height:42px"></div>
-          <div class="sponsor"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Rotaract_Emblem.svg" alt="s2" style="height:42px"></div>
-          <div class="sponsor"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Soccer_ball.svg" alt="s3" style="height:42px"></div>
-          <div class="sponsor"><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Cricket_ball_icon.svg" alt="s4" style="height:42px;filter:grayscale(0.1)"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT PREVIEW / FOOTER CTA -->
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h3>Contact</h3>
-          <div style="color:rgba(255,255,255,0.6)">Get in touch → <a href="contact.html" style="color:var(--accent)">Contact</a></div>
-        </div>
-
-        <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-          <div style="flex:1;min-width:220px" class="card">
-            <strong>Location</strong>
-            <p style="opacity:0.9">সুনামগঞ্জ, বাংলাদেশ</p>
-          </div>
-
-          <div style="flex:1;min-width:220px" class="card">
-            <strong>Phone / Email</strong>
-            <p style="opacity:0.9">+8801XXXXXXXXX<br>info@sonaliotitclub.com</p>
-          </div>
-
-          <div style="flex:0 0 260px" class="card" aria-hidden="true">
-            <strong>Quick Links</strong>
-            <div style="margin-top:8px"><a href="about.html" style="color:var(--accent)">About</a> • <a href="events.html" style="color:var(--accent)">Events</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </footer>
   </main>
 
-  <footer>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-      <div style="display:flex;gap:12px;align-items:center">
-        <div style="width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ffd76b);display:grid;place-items:center;color:#081229;font-weight:800">SO</div>
-        <div>
-          <div style="font-weight:700">Sonali Otit</div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.6)">Football & Rotaract Club</div>
-        </div>
-      </div>
-
-      <div style="text-align:right">
-        <div style="margin-bottom:6px">© <span id="yr"></span> Sonali Otit Club</div>
-        <div style="display:flex;gap:10px;justify-content:flex-end">
-          <a href="#"><i class="fab fa-facebook" style="color:var(--accent)"></i></a>
-          <a href="#"><i class="fab fa-instagram" style="color:var(--accent)"></i></a>
-          <a href="#"><i class="fab fa-youtube" style="color:var(--accent)"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <script>
-    // set year
+    // footer year
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // tiny parallax on mousemove for 3D area
-    const hero = document.querySelector('.hero-3d');
-    if (hero) {
-      hero.addEventListener('mousemove', e => {
-        const rect = hero.getBoundingClientRect();
+    // small parallax/hover for big-cards
+    document.querySelectorAll('.big-card').forEach(card=>{
+      card.addEventListener('mousemove', (e)=>{
+        const rect = card.getBoundingClientRect();
         const cx = rect.left + rect.width/2;
         const cy = rect.top + rect.height/2;
-        const dx = (e.clientX - cx)/rect.width;
-        const dy = (e.clientY - cy)/rect.height;
-        hero.querySelectorAll('.shape').forEach((el,i)=>{
-          const depth = (i+1)*12;
-          el.style.transform = `translate3d(-50%,-50%,${60 + depth}px) rotateY(${dx*12}deg) translateX(${dx*20}px) translateY(${dy*18}px)`;
-        });
+        const dx = (e.clientX - cx) / rect.width;
+        const dy = (e.clientY - cy) / rect.height;
+        card.style.transform = `perspective(900px) rotateX(${(-dy*6)}deg) rotateY(${dx*8}deg) translateZ(0)`;
       });
-      hero.addEventListener('mouseleave', ()=> {
-        hero.querySelectorAll('.shape').forEach((el)=>{
-          el.style.transform = '';
-        });
+      card.addEventListener('mouseleave', ()=>{
+        card.style.transform = '';
       });
-    }
+    });
   </script>
 </body>
 </html>
