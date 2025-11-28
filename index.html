@@ -2,441 +2,314 @@
 <html lang="bn">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ইমরান হুসাইন মাহি — তরুণদের জন্য</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SOFC ACADEMY</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* -----------------------
-       Modern colorful card style
-       ----------------------- */
     :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --accent-1:#ff6b6b;
-      --accent-2:#ffd166;
-      --accent-3:#6be4c6;
-      --muted:#9aa4b2;
-      --glass: rgba(255,255,255,0.03);
-      --maxw:1100px;
-      --radius:14px;
-      --gap:18px;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Bengali", "Hind Siliguri", Arial;
+      --accent:#0ea5a4; /* teal */
+      --dark:#0f1724;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.06);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: linear-gradient(180deg, #071025 0%, #081226 50%, #0b1226 100%);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:32px 16px;
-      display:flex;
-      justify-content:center;
-      font-size:16px;
-    }
-    .wrap{
-      width:100%;
-      max-width:var(--maxw);
-    }
+    body{margin:0;background:linear-gradient(180deg,#f8fbfb 0%, #eef7f7 100%);color:var(--dark);}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
 
-    header{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:22px;
-    }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .logo{
-      width:56px;height:56px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent-1),var(--accent-3));
-      display:flex;align-items:center;justify-content:center;
-      font-weight:700;color:#081226;font-size:20px;
-      box-shadow:0 8px 30px rgba(0,0,0,0.6);
-    }
-    nav{display:flex;gap:12px;align-items:center}
-    nav a{
-      color:var(--muted);
-      text-decoration:none;padding:8px 12px;border-radius:10px;
-      transition:all .18s;
-    }
-    nav a:hover{color:#fff;background:var(--glass);transform:translateY(-2px)}
-    .hero{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      padding:28px;border-radius:var(--radius);box-shadow: 0 10px 30px rgba(2,6,23,.6);
-      display:grid;grid-template-columns:1fr 360px;gap:22px;margin-bottom:20px;
-    }
-    .hero-left h1{margin:0;font-size:28px}
-    .hero-left p{color:var(--muted);margin-top:8px}
-    .hero-meta{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
-    .pill{background:linear-gradient(90deg,var(--accent-2),var(--accent-3));padding:8px 12px;border-radius:999px;color:#072033;font-weight:600;font-size:13px}
-    .hero-right{
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
-      border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px;
-      align-items:center;justify-content:center;
-    }
-    .hero-right img{width:100%;height:220px;object-fit:cover;border-radius:10px;background:#071427}
-    .actions{display:flex;gap:8px;margin-top:8px}
-    button, .btn{
-      border:0;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent-1),#ff8f7a);
-      color:#081226;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(255,107,107,.12)
-    }
-    .btn-muted{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);font-weight:600}
+    /* NAV */
+    header{backdrop-filter:blur(6px);position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.6);border-bottom:1px solid rgba(15,23,36,0.04)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#07a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+    .brand h1{margin:0;font-size:18px}
+    nav a{margin-left:18px;text-decoration:none;color:var(--dark);font-weight:600}
+    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none}
 
-    main{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 26px rgba(2,6,23,.6)}
-    h2{margin:0 0 10px 0}
-    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .service{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:12px;border-radius:10px}
-    .service h3{margin:0;font-size:16px}
-    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero-left h2{font-size:36px;margin:0 0 12px}
+    .hero-left p{color:var(--muted);margin:0 0 18px}
+    .stats{display:flex;gap:14px;margin-top:12px}
+    .stat{background:linear-gradient(180deg,rgba(14,165,164,0.08),rgba(14,165,164,0.02));padding:12px;border-radius:10px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,1),rgba(255,255,255,0.9));box-shadow:0 8px 20px rgba(10,10,20,0.06);padding:18px;border-radius:14px}
+    .hero-card h3{margin:0 0 8px}
+    .apply-btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:#0b77ff;color:white;text-decoration:none;font-weight:700}
 
-    /* NEWS ARTICLE */
-    .news-article{background:linear-gradient(90deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:14px;border-radius:10px}
-    .news-article h3{margin-top:0}
-    .wishes-list{min-height:80px;border-radius:8px;padding:8px;background:rgba(255,255,255,0.02);color:var(--muted);font-style:italic}
+    /* sections */
+    section{padding:28px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,20,0.04)}
 
-    /* right column widgets */
-    .widget{margin-bottom:14px}
-    .socials{display:flex;gap:8px;flex-wrap:wrap}
-    .socials a{display:inline-block;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);text-decoration:none}
+    /* Courses */
+    .course{display:flex;gap:12px;align-items:flex-start}
+    .course .icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#fde68a,#f59e0b);display:flex;align-items:center;justify-content:center;color:#111;font-weight:800}
+    .course h4{margin:0}
 
-    footer{margin-top:22px;color:var(--muted);text-align:center;font-size:14px}
+    /* Instructors */
+    .team{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .member{display:flex;flex-direction:column;align-items:center;padding:12px}
+    .member img{width:88px;height:88px;border-radius:999px;object-fit:cover}
 
-    /* responsive */
-    @media (max-width:980px){
-      .hero, main{grid-template-columns:1fr}
-      .hero-right{order:2}
-      main{grid-template-columns:1fr}
+    /* Enrollment form */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    form .full{grid-column:1/3}
+    input,select,textarea{padding:10px;border-radius:8px;border:1px solid #e6eef0}
+    .btn-primary{background:var(--accent);color:white;padding:10px;border-radius:10px;border:none;cursor:pointer}
+
+    /* Gallery */
+    .masonry{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .masonry img{width:100%;border-radius:8px;display:block}
+
+    /* Footer */
+    footer{margin-top:36px;padding:24px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:1000px){.hero{grid-template-columns:1fr 360px}}
+    @media (max-width:880px){.grid3{grid-template-columns:repeat(2,1fr)}.team{grid-template-columns:repeat(2,1fr)}.masonry{grid-template-columns:repeat(2,1fr)}header .nav{padding:8px}
+      .hero{grid-template-columns:1fr}
+      .hero-card{order:2}
     }
-
-    /* editable highlight */
-    [contenteditable="true"]{outline: 2px dashed rgba(255,255,255,0.04);padding:6px;border-radius:6px}
-    .edit-row{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:8px}
-    .small{font-size:13px;color:var(--muted)}
-    .copy-btn{background:linear-gradient(90deg,var(--accent-3),#2fe0b7);color:#072033}
+    @media (max-width:480px){.grid3{grid-template-columns:1fr}.team{grid-template-columns:1fr}.masonry{grid-template-columns:1fr}nav a{display:none}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <header>
+    <div class="container nav">
       <div class="brand">
-        <div class="logo">M</div>
+        <div class="logo">SF</div>
         <div>
-          <div style="font-weight:800">ইমরান হুসাইন মাহি</div>
-          <div class="small">তরুণ রাজনীতিবিদ • ক্রিয়েটর • উদ্যোক্তা</div>
+          <h1>SOFC ACADEMY</h1>
+          <div style="color:var(--muted);font-size:13px">Learn • Train • Succeed</div>
         </div>
       </div>
-
       <nav>
         <a href="#about">About</a>
-        <a href="#works">What I Do</a>
-        <a href="#news">News</a>
-        <a href="#youth">Youth Programs</a>
+        <a href="#courses">Courses</a>
+        <a href="#instructors">Instructors</a>
+        <a href="#admission">Admission</a>
         <a href="#contact">Contact</a>
+        <a class="cta" href="#enroll">Enroll</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
+  <main class="container">
     <!-- HERO -->
-    <section class="hero card" role="region" aria-label="Hero">
+    <section class="hero">
       <div class="hero-left">
-        <h1 contenteditable="true" id="site-title">ইমরান হুসাইন মাহি — তরুণদের জন্য কাজ করছি</h1>
-        <p contenteditable="true" id="site-sub">
-          বাবার দেখানো পথে এগিয়ে যাচ্ছি — তরুণদের দক্ষতা, রচনা ও কর্মসংস্থানের সুযোগ তৈরি করছি। ড্রামা, কনটেন্ট, ভ্রমণ, ডিজাইন ও অনলাইন ব্যবসার মাধ্যমে সমাজে ইতিবাচক প্রভাব ফেলতে প্রতিজ্ঞাবদ্ধ।
-        </p>
-
-        <div class="hero-meta">
-          <div class="pill">তরুণ রাজনীতি</div>
-          <div class="pill">মেন্টরিং</div>
-          <div class="pill">সৃষ্টিশীল ট্রেনিং</div>
+        <h2>SOFC ACADEMY এ স্বাগতম</h2>
+        <p>প্রফেশনাল ট্রেনিং এবং স্কিল ডেভেলপমেন্ট। কম্পিউটার, ইংরেজি, স্পোর্টস ও বিশেষ টেইলরড কোর্স — সবই এক জায়গায়।</p>
+        <div class="stats">
+          <div class="stat"><strong>১২০০+</strong><div style="font-size:12px;color:var(--muted)">ছাত্র</div></div>
+          <div class="stat"><strong>২৫</strong><div style="font-size:12px;color:var(--muted)">কোর্স</div></div>
+          <div class="stat"><strong>২০</strong><div style="font-size:12px;color:var(--muted)">ট্রেনার</div></div>
         </div>
-
-        <div class="edit-row">
-          <button class="btn" id="toggle-edit">Edit page</button>
-          <button class="btn btn-muted" id="save-btn">Save (Local)</button>
+        <div style="margin-top:18px">
+          <a class="apply-btn" href="#enroll"><i class="fa fa-user-plus"></i> ভর্তি করুন</a>
         </div>
       </div>
 
-      <div class="hero-right">
-        <img src="" id="profile-img" alt="Profile image (place an image URL in edit)" />
-        <div style="width:100%;display:flex;gap:8px">
-          <a class="btn" href="#news">আজকের নিউজ দেখুন</a>
-          <button class="btn btn-muted" id="download-news">কপি নিউজ</button>
+      <aside class="hero-card">
+        <h3>নতুন কোর্স শুরু হচ্ছে</h3>
+        <p style="color:var(--muted);">ফান্ডামেন্টাল কম্পিউটার ট্রেনিং — ১২ সপ্তাহ | ফি: ৳৬০০০</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+          <div>
+            <div style="font-size:13px;color:var(--muted)">পরবর্তী ক্লাস</div>
+            <div style="font-weight:700">10 ডিসেম্বর, 2025</div>
+          </div>
+          <a class="apply-btn" href="#admission"><i class="fa fa-calendar-check"></i> রেজিস্টার</a>
         </div>
-        <div class="small" style="margin-top:6px">সোশ্যাল: Facebook / YouTube / TikTok</div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-head">
+        <div>
+          <h3>আমাদের সম্পর্কে</h3>
+          <p style="color:var(--muted)">SOFC ACADEMY একটি প্রফেশনাল ট্রেনিং সেন্টার—যেখানে আমরা শিক্ষার্থীদের দক্ষতা বাড়াই বাস্তব-জীবন উপযোগী কোর্স দিয়ে।</p>
+        </div>
+        <div>
+          <a href="#contact" class="cta">যোগাযোগ করুন</a>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h4>মিশন</h4>
+          <p style="color:var(--muted)">স্থায়ী স্কিল শেখানো এবং রোজগারের উপযোগী ট্রেনিং প্রদান।</p>
+        </div>
+        <div class="card">
+          <h4>ভিশন</h4>
+          <p style="color:var(--muted)">একটি দক্ষ কর্মীশক্তি গঠন করা, স্থানীয় ও গ্লোবাল মার্কেটে প্রাসঙ্গিক।</p>
+        </div>
+        <div class="card">
+          <h4>অর্জিত সম্মান</h4>
+          <p style="color:var(--muted)">নানান ইভেন্ট ও প্রতিযোগিতায় সাফল্য—স্টুডেন্টদের রেকর্ড।</p>
+        </div>
       </div>
     </section>
 
-    <main>
-      <section aria-label="Main content">
-        <!-- ABOUT -->
-        <div id="about" class="card">
-          <h2>পরিচিতি</h2>
-          <p contenteditable="true" id="about-text">
-            ইমরান হুসাইন মাহি — একজন উদীয়মান তরুণ রাজনীতিবিদ, ডিরেক্টর, কনটেন্ট ক্রিয়েটর, ট্রাভেলার এবং অনলাইন উদ্যোক্তা। তিনি ছোটবেলা থেকেই তার late বাবার দেখানো রাজনৈতিক আদর্শ অনুসরণ করে চলেছেন এবং তরুণদের কল্যাণে কাজ করছেন।
-          </p>
-        </div>
+    <!-- COURSES -->
+    <section id="courses">
+      <div class="section-head">
+        <h3>কোর্সসমূহ</h3>
+        <div style="color:var(--muted);font-size:13px">ক্যাটাগরি: কম্পিউটার • ইংরেজি • সঠিকতা • স্পোর্টস</div>
+      </div>
 
-        <!-- WORKS / SERVICES -->
-        <div id="works" class="card" style="margin-top:12px">
-          <h2>আমি কী কি করি</h2>
-          <div class="services" id="services-grid">
-            <div class="service" contenteditable="true">
-              <h3>ড্রামা নির্মাণ</h3>
-              <div class="meta">পরিচালনা, শুটিং, এডিটিং — গল্প বলাই মূল লক্ষ্য।</div>
-            </div>
-            <div class="service" contenteditable="true">
-              <h3>কনটেন্ট ক্রিয়েশন</h3>
-              <div class="meta">সোশ্যাল মিডিয়ার জন্য ভিডিও, রিল, টিউটোরিয়াল ও সিরিজ।</div>
-            </div>
-            <div class="service" contenteditable="true">
-              <h3>ট্রাভেল ও ভ্লগ</h3>
-              <div class="meta">ভ্রমণের মাধ্যমে স্থানীয় সংস্কৃতি ও গল্প তুলে ধরা।</div>
-            </div>
-            <div class="service" contenteditable="true">
-              <h3>ডিজাইন ও গ্রাফিক্স</h3>
-              <div class="meta">পোস্টার, কভার আর্ট ও ব্র্যান্ডিং ডিজাইন।</div>
-            </div>
-            <div class="service" contenteditable="true">
-              <h3>অনলাইন ব্যবসা</h3>
-              <div class="meta">শপ ম্যানেজমেন্ট এবং প্রোডাক্ট ব্র্যান্ডিং।</div>
-            </div>
-            <div class="service" contenteditable="true">
-              <h3>তরুণ রাজনীতি ও সমাজসেবা</h3>
-              <div class="meta">তরুণদের জন্য কার্যক্রম, শিবির ও সচেতনতা কর্মসূচি।</div>
+      <div style="margin-top:14px">
+        <div class="card course">
+          <div class="icon"><i class="fa fa-laptop"></i></div>
+          <div>
+            <h4>কম্পিউটার ফান্ডামেন্টাল</h4>
+            <p style="color:var(--muted);margin:6px 0">ফাইল ম্যানেজমেন্ট, মাইক্রোসফট অফিস, বেসিক ইন্টারনেট</p>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <span style="font-weight:700">৳6000</span>
+              <a href="#admission" style="margin-left:auto;text-decoration:none;color:var(--accent);font-weight:700">Enroll</a>
             </div>
           </div>
         </div>
 
-        <!-- YOUTH PROGRAMS -->
-        <div id="youth" class="card" style="margin-top:12px">
-          <h2>তরুণদের জন্য প্রোগ্রাম</h2>
-          <p contenteditable="true" id="youth-text">
-            আমরা আয়োজন করি ট্রেনিং, ওয়ার্কশপ, কুইজ এবং কনটেন্ট-বিল্ডিং বুটক্যাম্প। উদ্যোক্তা ভাবনা, ডিজিটাল দক্ষতা ও সৃষ্টিশীলতা বাড়াতে নিয়মিত mentorship সেশন রয়েছে।
-          </p>
-
-          <ul id="programs-list" contenteditable="true">
-            <li>কনটেন্ট ক্রিয়েশন বুটক্যাম্প</li>
-            <li>গ্রাফিক্স ও ভিডিও এডিটিং ওয়ার্কশপ</li>
-            <li>অনলাইন ব্যবসা ও মার্কেটিং মূলক ক্লাস</li>
-            <li>রাজনৈতিক চেতনা ও সুশাসন সেশন</li>
-          </ul>
-        </div>
-
-        <!-- NEWS -->
-        <div id="news" class="card" style="margin-top:12px">
-          <h2>নিউজ</h2>
-
-          <div class="news-article" id="news-article">
-            <h3 contenteditable="true" id="news-title">ইমরান হুসাইন মাহির জন্মদিন আজ — তরুণ রাজনীতিবিদ ও বহুমুখী প্রতিভার অনুপ্রেরণাময় পথচলা</h3>
-
-            <p contenteditable="true" id="news-body">
-              <strong>সিলেট, বাংলাদেশ:</strong> আজ উদীয়মান তরুণ রাজনীতিবিদ, ডিরেক্টর, কনটেন্ট ক্রিয়েটর, ট্রাভেলার এবং অনলাইন উদ্যোক্তা ইমরান হুসাইন মাহির জন্মদিন। সুনামগঞ্জ জেলা যুবদলের প্রয়াত সহ-সভাপতি সাজ্জাদ হোসাইনের ছেলে হিসেবে তিনি বাবার দেখানো রাজনৈতিক আদর্শ ও নৈতিকতা অনুসরণ করে চলেছেন।
-            </p>
-
-            <p contenteditable="true" id="news-body-2">
-              মাহি বর্তমানে তরুণদের কল্যাণে, সামাজিক উন্নয়নমূলক কার্যক্রমে এবং ডিজিটাল প্ল্যাটফর্মে সচেতনতা তৈরি নিয়ে কাজ করছেন। একই সঙ্গে তিনি ড্রামা নির্মাণ, সোশ্যাল মিডিয়া কনটেন্ট তৈরি, ডিজাইন, ভ্রমণ, এবং অনলাইন ব্যবসায়ও সক্রিয়ভাবে যুক্ত রয়েছেন।
-            </p>
-
-            <h4>শুভেচ্ছা জানিয়েছেন:</h4>
-            <div class="wishes-list" id="wishes-list" contenteditable="true">
-              <!-- intentionally left blank for names -->
-              (এখানে নাম যুক্ত করা হবে)
-            </div>
-
-            <div style="display:flex;gap:8px;margin-top:10px">
-              <button class="copy-btn" id="copy-news">নিউজ কপি কর</button>
-              <button class="btn btn-muted" id="add-wish">নাম যুক্ত করুন</button>
+        <div class="card course" style="margin-top:12px">
+          <div class="icon" style="background:linear-gradient(135deg,#c7d2fe,#7c3aed)"><i class="fa fa-language"></i></div>
+          <div>
+            <h4>কমিউনিকেশন ইংলিশ</h4>
+            <p style="color:var(--muted);margin:6px 0">স্পিকিং, লিসনিং, ভোকাবুলারি ও গ্রামার</p>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <span style="font-weight:700">৳4500</span>
+              <a href="#admission" style="margin-left:auto;text-decoration:none;color:var(--accent);font-weight:700">Enroll</a>
             </div>
           </div>
         </div>
 
-      </section>
-
-      <!-- RIGHT COLUMN -->
-      <aside aria-label="Sidebar" style="display:flex;flex-direction:column;gap:12px">
-        <div class="card widget">
-          <h3>তাড়িদাতার বার্তা</h3>
-          <div class="small">ডাইরেক্ট এডিট করে নিজের তথ্য যোগ করুন।</div>
-          <div style="margin-top:8px">
-            <div><strong>Facebook:</strong> <span contenteditable="true" id="facebook-link">https://www.facebook.com/share/1EkoN2AS5s/</span></div>
-            <div><strong>YouTube:</strong> <span contenteditable="true" id="youtube-link">https://youtube.com/@imranhussainmahi177</span></div>
-            <div><strong>TikTok:</strong> <span contenteditable="true" id="tiktok-link">https://www.tiktok.com/@imranmahi519</span></div>
+        <div class="card course" style="margin-top:12px">
+          <div class="icon" style="background:linear-gradient(135deg,#86efac,#16a34a)"><i class="fa fa-futbol"></i></div>
+          <div>
+            <h4>বেসিক স্পোর্টস ট্রেনিং</h4>
+            <p style="color:var(--muted);margin:6px 0">ফুটবল, ব্যাডমিন্টন ও ফিটনেস স্কিল</p>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <span style="font-weight:700">৳3000</span>
+              <a href="#admission" style="margin-left:auto;text-decoration:none;color:var(--accent);font-weight:700">Enroll</a>
+            </div>
           </div>
         </div>
 
-        <div class="card widget">
-          <h3>গ্যালারি</h3>
-          <div class="small">ছবি যোগ করতে নিচের কোডে image src বসান (বা ইমেজ URL এডিট করুন)</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
-            <div style="height:80px;background:#071427;border-radius:8px"></div>
-            <div style="height:80px;background:#071427;border-radius:8px"></div>
-            <div style="height:80px;background:#071427;border-radius:8px"></div>
-            <div style="height:80px;background:#071427;border-radius:8px"></div>
+      </div>
+    </section>
+
+    <!-- Instructors -->
+    <section id="instructors">
+      <div class="section-head"><h3>ট্রেইনাররা</h3><div style="color:var(--muted);font-size:13px">প্রফেশনাল ও এক্সপেরিয়েন্সড</div></div>
+      <div class="team" style="margin-top:12px">
+        <div class="card member">
+          <img src="https://via.placeholder.com/150" alt="trainer">
+          <h4 style="margin:8px 0 4px">মো: রিয়াদ</h4>
+          <div style="color:var(--muted);font-size:13px">কম্পিউটার ট্রেইনার — ১০ বছরের অভিজ্ঞতা</div>
+        </div>
+        <div class="card member">
+          <img src="https://via.placeholder.com/150" alt="trainer">
+          <h4 style="margin:8px 0 4px">সুমাইয়া আক্তার</h4>
+          <div style="color:var(--muted);font-size:13px">ইংরেজি কোর্স কন্ডাক্টর</div>
+        </div>
+        <div class="card member">
+          <img src="https://via.placeholder.com/150" alt="trainer">
+          <h4 style="margin:8px 0 4px">আব্দুল করিম</h4>
+          <div style="color:var(--muted);font-size:13px">স্পোর্টস কোচ</div>
+        </div>
+        <div class="card member">
+          <img src="https://via.placeholder.com/150" alt="trainer">
+          <h4 style="margin:8px 0 4px">ফাতেমা</h4>
+          <div style="color:var(--muted);font-size:13px">আইটি সহকারী</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admission -->
+    <section id="admission">
+      <div class="section-head"><h3>ভর্তি ফর্ম</h3><div style="color:var(--muted);font-size:13px">আনলাইন ভর্তি ফর্ম — দ্রুত ভর্তি নিশ্চিত করুন</div></div>
+      <div style="margin-top:12px" class="card">
+        <form id="admissionForm">
+          <input name="name" placeholder="পূর্ণ নাম" required>
+          <input name="phone" placeholder="মোবাইল নম্বর" required>
+          <input name="age" placeholder="বয়স (ইচ্ছা করলে)" >
+          <select name="course" required>
+            <option value="">কোর্স সিলেক্ট করুন</option>
+            <option>কম্পিউটার ফান্ডামেন্টাল</option>
+            <option>কমিউনিকেশন ইংলিশ</option>
+            <option>বেসিক স্পোর্টস</option>
+          </select>
+          <input class="full" name="email" placeholder="ই-মেইল (ঐচ্ছিক)">
+          <textarea class="full" name="note" placeholder="মেসেজ/নোট (ঐচ্ছিক)" rows="3"></textarea>
+          <div style="grid-column:1/3;display:flex;gap:8px;align-items:center">
+            <div style="flex:1">
+              <div style="font-size:13px;color:var(--muted)">পেমেন্ট অপশন</div>
+              <select name="payment" style="width:100%">
+                <option>ক্যাশ</option>
+                <option>বিকাশ</option>
+                <option>রকেট</option>
+                <option>ব্যাংক ট্রান্সফার</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary">আবেদন করুন</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="section-head"><h3>গ্যালারি</h3><div style="color:var(--muted);font-size:13px">ইভেন্ট ও ট্রেনিং ফটো</div></div>
+      <div class="masonry" style="margin-top:12px">
+        <img src="https://via.placeholder.com/600x400" alt="img">
+        <img src="https://via.placeholder.com/600x400" alt="img">
+        <img src="https://via.placeholder.com/600x400" alt="img">
+        <img src="https://via.placeholder.com/600x400" alt="img">
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-head"><h3>যোগাযোগ করুন</h3><div style="color:var(--muted);font-size:13px">ঠিকানা, ফোন ও ম্যাপ</div></div>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:12px">
+        <div class="card">
+          <h4>Contact Details</h4>
+          <p style="color:var(--muted)">ঠিকানা: তোমার অ্যাড্রেস এখানে লিখো<br>ফোন: ০১৭xxxxxxxx<br>ই-মেইল: info@sofcacademy.com</p>
+          <div style="margin-top:12px">
+            <a href="#" style="text-decoration:none;margin-right:10px"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" style="text-decoration:none;margin-right:10px"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="#" style="text-decoration:none;margin-right:10px"><i class="fab fa-whatsapp fa-lg"></i></a>
           </div>
         </div>
-
-        <div class="card widget">
-          <h3 id="contact">যোগাযোগ</h3>
-          <div class="small">ইমেল/ফোন →</div>
-          <div style="margin-top:8px">
-            <div contenteditable="true" id="contact-info">email@example.com | +8801xxxxxxxxx</div>
-          </div>
+        <div class="card">
+          <h4>Map</h4>
+          <div style="background:#f1f5f9;height:220px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Google Map Embed Placeholder</div>
         </div>
-
-        <div class="card widget">
-          <h3>Website Tools</h3>
-          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
-            <button class="btn btn-muted" id="reset-local">Reset Edits</button>
-            <button class="btn btn-muted" id="export-json">Export Content (.json)</button>
-          </div>
-        </div>
-
-      </aside>
-    </main>
+      </div>
+    </section>
 
     <footer>
-      © <span id="footer-year"></span> ইমরান হুসাইন মাহি — তরুণদের জন্য। এই পেজটি সম্পূর্ণ এডিটেবল এবং লোকালভাবে সেভ করা যায়।
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="color:var(--muted)">© SOFC ACADEMY • All rights reserved</div>
+        <div style="color:var(--muted)">Designed with ❤️ by SOFC</div>
+      </div>
     </footer>
-  </div>
+
+  </main>
 
   <script>
-    // ---------------------------
-    // Simple edit/save to localStorage
-    // ---------------------------
-    const editableIds = [
-      'site-title','site-sub','about-text','news-title','news-body','news-body-2',
-      'wishes-list','youth-text','programs-list','facebook-link','youtube-link','tiktok-link',
-      'contact-info','profile-img'
-    ];
-
-    // load saved
-    function loadSaved(){
-      try{
-        const data = JSON.parse(localStorage.getItem('mahi_site_content') || '{}');
-        editableIds.forEach(id=>{
-          if(!document.getElementById(id)) return;
-          if(data[id] !== undefined){
-            if(id === 'profile-img'){
-              document.getElementById('profile-img').src = data[id] || '';
-            } else {
-              document.getElementById(id).innerHTML = data[id];
-            }
-          }
-        });
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-      }catch(e){ console.warn('load error',e) }
-    }
-
-    function saveAll(){
-      const data = {};
-      editableIds.forEach(id=>{
-        const el = document.getElementById(id);
-        if(!el) return;
-        if(id === 'profile-img'){
-          data[id] = el.src || '';
-        } else {
-          data[id] = el.innerHTML;
-        }
-      });
-      localStorage.setItem('mahi_site_content', JSON.stringify(data));
-      alert('সংরক্ষণ করা হয়েছে (Local).');
-    }
-
-    document.getElementById('save-btn').addEventListener('click', saveAll);
-
-    // toggle contenteditable
-    let editMode = false;
-    document.getElementById('toggle-edit').addEventListener('click', ()=>{
-      editMode = !editMode;
-      editableIds.forEach(id=>{
-        const el = document.getElementById(id);
-        if(!el) return;
-        if(id === 'profile-img') {
-          // for image we will open a prompt when editing
-          if(editMode) el.addEventListener('dblclick', setImage);
-        } else {
-          el.contentEditable = editMode ? "true" : "false";
-        }
-      });
-      document.getElementById('toggle-edit').textContent = editMode ? 'Exit edit' : 'Edit page';
-    });
-
-    function setImage(){
-      const url = prompt('Profile image URL দিন (public image link):', document.getElementById('profile-img').src || '');
-      if(url !== null){
-        document.getElementById('profile-img').src = url;
-      }
-    }
-
-    // copy news
-    document.getElementById('copy-news').addEventListener('click', ()=>{
-      const title = document.getElementById('news-title').innerText.trim();
-      const b1 = document.getElementById('news-body').innerText.trim();
-      const b2 = document.getElementById('news-body-2').innerText.trim();
-      const wishes = document.getElementById('wishes-list').innerText.trim();
-      const txt = title + "\\n\\n" + b1 + "\\n\\n" + b2 + "\\n\\n" + "শুভেচ্ছা জানিয়েছেন:\\n" + wishes;
-      navigator.clipboard.writeText(txt).then(()=> alert('নিউজ কপি হয়েছে। এখন পেস্ট করতে পারেন।'));
-    });
-
-    // add wish (append placeholder)
-    document.getElementById('add-wish').addEventListener('click', ()=>{
-      const name = prompt('শুভেচ্ছা জানানোর নাম লিখুন (বা খালি রেখে OK করলে একটি খালি লাইন যোগ হবে):','');
-      const el = document.getElementById('wishes-list');
-      if(name === null) return;
-      if(name.trim() === ''){
-        el.innerHTML += '<div>..................................</div>';
-      } else {
-        el.innerHTML += '<div>• ' + escapeHtml(name) + '</div>';
-      }
-    });
-
-    // download/copy news button (copy to clipboard)
-    document.getElementById('download-news').addEventListener('click', ()=>{
-      document.getElementById('copy-news').click();
-    });
-
-    // export content JSON
-    document.getElementById('export-json').addEventListener('click', ()=>{
-      const data = JSON.parse(localStorage.getItem('mahi_site_content') || '{}');
-      const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'mahi_site_content.json'; a.click();
-      URL.revokeObjectURL(url);
-    });
-
-    // reset
-    document.getElementById('reset-local').addEventListener('click', ()=>{
-      if(confirm('লোকাল changes মুছে ফেলতে চান?')) {
-        localStorage.removeItem('mahi_site_content');
-        location.reload();
-      }
-    });
-
-    // small helper
-    function escapeHtml(unsafe) {
-      return unsafe.replace(/[&<"']/g, function(m) { return {'&':'&amp;','<':'&lt;','"':'&quot;',"'":"&#039;"}[m]; });
-    }
-
-    // init
-    loadSaved();
-
-    // make certain blocks editable by default (nice for quick edits)
-    ['services-grid','wishes-list'].forEach(id=>{
-      if(document.getElementById(id)) document.getElementById(id).contentEditable = false;
-    });
-
-    // Accessibility: focus outline
-    document.addEventListener('keydown', (e)=>{
-      if(e.key === 'E' && (e.ctrlKey || e.metaKey)){
-        document.getElementById('toggle-edit').click();
-      }
+    // Simple client-side demo: show form data in alert (replace with real backend integration)
+    document.getElementById('admissionForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const obj = Object.fromEntries(data.entries());
+      alert('ভর্তি ফর্ম সাবমিট হয়েছে:\n' + JSON.stringify(obj, null, 2));
+      e.target.reset();
+      window.location.hash = '#';
     });
   </script>
 </body>
